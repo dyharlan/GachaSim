@@ -43,7 +43,6 @@ public class Middleware {
                 {
                     Crolls = 0;
                     _4Spity++;
-                    //if(Backend.Rates() >= .5f)
                     if(rngd.nextBoolean() == true)
                     {
                        return  $5rateup;
@@ -60,7 +59,6 @@ public class Middleware {
                 {
                     Crolls = 0;
                     _4Spity++;
-                    //if(Backend.Rates() >= .5f)
                     if(rngd.nextBoolean() == true)
                     {
                        guaranteed5 = false;
