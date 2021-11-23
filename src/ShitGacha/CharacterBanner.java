@@ -5,8 +5,8 @@ import java.util.Random;
  *
  * @author dyhar
  */
-public class Middleware {
-    public static boolean guaranteed5 = false; public static int Crolls=0,_4Spity=0,Wrolls=0; 
+public class CharacterBanner {
+    public static boolean guaranteed5 = false; public static int Crolls=0,_4Spity=0; 
     public static Random rngd = new Random();
      //rolls a banner once.
     public static String CharRoll(String $5rateup, String  $4rateup)
@@ -79,7 +79,7 @@ public class Middleware {
                     return Backend._4_Star__Characters($4rateup);
                 }
                 //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
-                else if(Backend.Rarity(Backend.Rates()) == 3 && _4Spity >= 9)
+                else if(Backend.Rarity(Backend.Rates()) == 3 && _4Spity > 9)
                 {
                     _4Spity = 0;
                     Crolls++;
