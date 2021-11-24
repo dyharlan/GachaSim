@@ -2,10 +2,18 @@
 package ShitGacha;
 import java.util.Random;
 /**
- *
+ * This class mainly handles the algorithms to determine the rarity of the pull on each
+ * of the in-game banners. (Standard, Weapon, and Character)
+ * 
+ * Summary of each of the Methods:
+ * gachaChance() - returns a float value between 0 and 1. 
+ * Rarity() - Determines the rarity of the wish based off a float value passed on to it. The odds are adjusted depending on the banner used.
+ * resetChance() - resets the soft pity accumulated odds on each banner.
+ * 
  * @author dyhar
  */
 public class Backend {
+    
     //Creating an instance of the Character Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static CharacterBanner CbannerStatus = new CharacterBanner(); 
@@ -19,6 +27,8 @@ public class Backend {
     static float Csoftpity=0.0f;  //resets the Character softpity to 0f
     static float Wsoftpity=0.0f;  //resets the Weapon softpity to 0f
     static float Ssoftpity=0.0f;  //resets the Std banner softpity to 0f
+    
+    
     //This method determines the chance that will be used by Rarity() to determine the rarity of the wish.
     //Starting with the 74/64th pull, an additional 6.25% is deducted until the percentage is equal to or less than 0.
     //char b determines what banner is used to appropriately kickstart the soft pity.
@@ -57,24 +67,7 @@ public class Backend {
         }
         return 0.0f;
     }
-    public static void resetChance(char b)
-    {
-        switch (b)
-        {
-        //if c is invoked, soft pity accumulated odds for the char banner are reset.
-            case 'c':
-                Csoftpity = 0.0f;
-                break;
-        //if w is invoked, soft pity accumulated odds for the weapon banner are reset.
-            case 'w':
-                Wsoftpity = 0.0f;
-                break;
-        //if w is invoked, soft pity accumulated odds for the weapon banner are reset.
-            case 's':
-                Ssoftpity = 0.0f;
-                break;
-        }
-    }
+   
     //Determines the rarity based-off a float value passed on to it.
     //invoking w will adjust the rates to match the weapon banner
     //invoking c will adjust the rates to match the char banner
@@ -100,6 +93,24 @@ public class Backend {
         }
         return 0;
     }
-
-
+    //this method manually resets the accumulated soft pity
+    //for each of the banners.
+    public static void resetChance(char b)
+    {
+        switch (b)
+        {
+        //if c is invoked, soft pity accumulated odds for the char banner are reset.
+            case 'c':
+                Csoftpity = 0.0f;
+                break;
+        //if w is invoked, soft pity accumulated odds for the weapon banner are reset.
+            case 'w':
+                Wsoftpity = 0.0f;
+                break;
+        //if w is invoked, soft pity accumulated odds for the weapon banner are reset.
+            case 's':
+                Ssoftpity = 0.0f;
+                break;
+        }
+    }
 }

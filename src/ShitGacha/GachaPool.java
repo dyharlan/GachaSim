@@ -8,7 +8,8 @@ package ShitGacha;
 import java.util.Random;
 
 /**
- *
+ * This class contains the Pool that the banners use to determine
+ * the character or weapon to give to the user.
  * @author dyhar
  */
 public class GachaPool {

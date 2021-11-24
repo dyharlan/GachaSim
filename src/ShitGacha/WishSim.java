@@ -3,8 +3,8 @@ package ShitGacha;
 
 import java.util.Scanner;
 /**
- * TODO: SIMPLIFY/STREAMLINE LOOKUP TABLES FOR THE GACHA POOL
- * TODO: FIND SOMEONE TO VERIFY THE ACCURACY OF THE RATES
+ * TODO: SIMPLIFY/STREAMLINE LOOKUP TABLES FOR THE GACHA POOL [Partially Done, Decoupled Gacha Pool from backend] 
+ * TODO: FIND SOMEONE TO VERIFY THE ACCURACY OF THE RATES (From my own testing with n=1000, the accumulated rate (1.6%) matches that of what the game presents.)
  * TODO: CLEANUP/FIX OUTPUT
  * TODO: ADD AN ACTUAL LICENSE
  * TODO: IMPLEMENT FATE POINTS

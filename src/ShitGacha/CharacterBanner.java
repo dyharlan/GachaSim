@@ -3,7 +3,8 @@ package ShitGacha;
 import java.util.Random;
 import static ShitGacha.GachaPool.*;
 /**
- *
+ * This class handles the rolling of the Character Rate-up banner.
+ * Arguments in order are: The 5* rate up, and three rate up 4*. Separated by commas.
  * @author dyhar
  */
 public class CharacterBanner {
