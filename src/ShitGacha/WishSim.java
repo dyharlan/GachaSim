@@ -3,7 +3,10 @@ package ShitGacha;
 
 import java.util.Scanner;
 /**
- *
+ * TODO: SIMPLIFY/STREAMLINE LOOKUP TABLES FOR THE GACHA POOL
+ * TODO: FIND SOMEONE TO VERIFY THE ACCURACY OF THE RATES
+ * TODO: CLEANUP/FIX OUTPUT
+ * TODO: ADD AN ACTUAL LICENSE
  * @author dyhar
  */
 public class WishSim 
