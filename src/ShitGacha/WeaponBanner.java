@@ -10,5 +10,5 @@ package ShitGacha;
  * @author dyhar
  */
 public class WeaponBanner {
-    
+    public static int Wrolls=0;
 }

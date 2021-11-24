@@ -6,16 +6,41 @@ import java.util.Random;
  * @author dyhar
  */
 public class Backend {
+    //Creating an instance of the Character Banner Class
+     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
+    static CharacterBanner CbannerStatus = new CharacterBanner(); 
+    //Creating an instance of the Weapon Banner Class
+    //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
+    static WeaponBanner WbannerStatus = new WeaponBanner();
     static Random garborates = new Random();
-    public static float Rates()
+    static float softpity=0;
+    public static float Rates(char b)
     {
-        return garborates.nextFloat();
+        switch (b)
+        {
+        case 'c':
+            if(CbannerStatus.Crolls >= 74){
+                softpity+=0.0625f;
+                return garborates.nextFloat()-softpity; 
+            }
+                return garborates.nextFloat(); 
+        case 'w':
+            if(CbannerStatus.Crolls >= 64){
+                softpity+=0.0625f;
+                return garborates.nextFloat()-softpity; 
+            }
+                return garborates.nextFloat();
+        case 'r':
+            softpity = 0;
+            break;
+        }
+        return 0.0f;
     }
     
     public static int Rarity(float x)
     {
         int rarity=0;
-        if(x <=0.006f) //rarity is 5* if the number is less than or equal to 0.6% or 0.006
+        if(x <= 0.006f) //rarity is 5* if the number is less than or equal to 0.6% or 0.006
             rarity = 5;
         else if(x <= 0.051f)// rarity is 4* if the number is less than or equal to 5.1% or 0.051
             rarity = 4;
