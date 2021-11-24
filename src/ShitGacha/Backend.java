@@ -19,7 +19,7 @@ public class Backend {
     //Starting with the 74/64th pull, an additional 6.25% is deducted until the percentage is equal to or less than 0.
     //char b determines what banner is used to appropriately kickstart the soft pity.
     //Typing char 'r' resets the accumulated soft pity % to 0.
-    public static float gachaRates(char b)
+    public static float gachaChance(char b)
     {
         switch (b)
         {
@@ -47,16 +47,26 @@ public class Backend {
         return 0.0f;
     }
     //Determines the rarity based-off a float value passed on to it.
-    public static int Rarity(float x)
+    public static int Rarity(float x, char b)
     {
-        int rarity=0;
-        if(x <= 0.006f) //rarity is 5* if the number is less than or equal to 0.6% or 0.006
-            rarity = 5;
-        else if(x <= 0.051f)// rarity is 4* if the number is less than or equal to 5.1% or 0.051
-            rarity = 4;
-        else if (x > 0.051f && x <= 1f) //fockin shit
-            rarity = 3;
-        return rarity;
+        switch(b)
+        {
+            case 'w':
+                if(x <= 0.007f) //rarity is 5* if the number is less than or equal to 0.7% or 0.007
+                    return 5;
+                else if(x <= 0.06f)// rarity is 4* if the number is less than or equal to 6% or 0.06
+                    return 4;
+                else if (x > 0.06f && x <= 1f) //fockin shit
+                    return 3;
+            case 'c':
+                if(x <= 0.006f) //rarity is 5* if the number is less than or equal to 0.6% or 0.006
+                    return 5;
+                else if(x <= 0.051f)// rarity is 4* if the number is less than or equal to 5.1% or 0.051
+                    return 4;
+                else if (x > 0.051f && x <= 1f) //fockin shit
+                    return 3;
+        }
+        return 0;
     }
    
     //character pool
