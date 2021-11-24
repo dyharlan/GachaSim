@@ -12,9 +12,13 @@ public class Backend {
     //Creating an instance of the Weapon Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static WeaponBanner WbannerStatus = new WeaponBanner();
+    //Creating an instance of the Standard Banner Class
+    //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
+    static StdBanner SbannerStatus = new StdBanner();
     static Random garborates = new Random(); //Declaring a new random class
     static float Csoftpity=0.0f;  //resets the Character softpity to 0f
     static float Wsoftpity=0.0f;  //resets the Weapon softpity to 0f
+    static float Ssoftpity=0.0f;  //resets the Std banner softpity to 0f
     //This method determines the chance that will be used by Rarity() to determine the rarity of the wish.
     //Starting with the 74/64th pull, an additional 6.25% is deducted until the percentage is equal to or less than 0.
     //char b determines what banner is used to appropriately kickstart the soft pity.
@@ -22,11 +26,12 @@ public class Backend {
     {
         //this switch determines when the soft pity will start.
         //selecting c will kickstart the soft pity at the 74th pull, while w is at 64th.
+        //soft pity will kickstart at (n-1) pulls
         switch (b)
         {
         case  'c':
             //starting with the 74th pull on the character banner, an additional 6.25% is added to the odds.
-            if(CbannerStatus.Crolls >= 74){ 
+            if(CbannerStatus.Crolls >= 73){ 
                 Csoftpity+=0.0625f;
                 return garborates.nextFloat()-Csoftpity; 
             }
@@ -34,14 +39,21 @@ public class Backend {
                 return garborates.nextFloat(); 
                 
         case 'w': 
-            //starting with the 64th pull weapon banner, an additional 6.25% is added to the odds.
-            if(WbannerStatus.Wrolls >= 64){
+            //starting with the 64th pull on the weapon banner, an additional 6.25% is added to the odds.
+            if(WbannerStatus.Wrolls >= 63){
                 Wsoftpity+=0.0625f;
                 return garborates.nextFloat()-Wsoftpity; 
             }
             //if it's less than 64 pulls, it returns the odds without manipulation.
                 return garborates.nextFloat();
-      
+        case 's': 
+            //starting with the 74th pull on the Std banner, an additional 6.25% is added to the odds.
+            if(SbannerStatus.Srolls >= 73){
+                Ssoftpity+=0.0625f;
+                return garborates.nextFloat()-Ssoftpity; 
+            }
+            //if it's less than 64 pulls, it returns the odds without manipulation.
+                return garborates.nextFloat();
         }
         return 0.0f;
     }
@@ -56,6 +68,10 @@ public class Backend {
         //if w is invoked, soft pity accumulated odds for the weapon banner are reset.
             case 'w':
                 Wsoftpity = 0.0f;
+                break;
+        //if w is invoked, soft pity accumulated odds for the weapon banner are reset.
+            case 's':
+                Ssoftpity = 0.0f;
                 break;
         }
     }

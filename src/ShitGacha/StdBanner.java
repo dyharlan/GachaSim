@@ -4,80 +4,77 @@
  * and open the template in the editor.
  */
 package ShitGacha;
+
 import java.util.Random;
+
 /**
  *
  * @author dyhar
  */
-public class WeaponBanner {
-    public static int _4Spity=0; 
+public class StdBanner {
+    public static int Srolls=0,_4Spity=0; 
     public static Random rngd = new Random();
-    public static int Wrolls=0;
-    //rolls a banner once.
-    public static String WpnRoll(String $5wrateup1, String $5rateup2 
-            ,String  $4wrateup1, String  $4wrateup2, String  $4wrateup3, String  $4wrateup4, String  $4wrateup5)
-     {
+    public static String StdRoll()
+    {
                 //  _____    _____ _                 
                 // | ____|  / ____| |                
                 // | |__   | (___ | |_ __ _ _ __ ___ 
                 // |___ \   \___ \| __/ _` | '__/ __|
                 //  ___) |  ____) | || (_| | |  \__ \
                 // |____/  |_____/ \__\__,_|_|  |___/
-                int rarity = Backend.Rarity(Backend.gachaChance('w'), 'w');
-                //You randomly got a 5* pull.
+                int rarity = Backend.Rarity(Backend.gachaChance('s'), 'c');
+                //You get a std 5*.
                 if(rarity == 5) 
                 {
-                    Wrolls = 0; //resets pity counter to 0
-                    _4Spity++; // add 4* pity
-                    Backend.resetChance('w'); //resets accumulated odds
-                    return Backend._5_Star__Weapons($5wrateup1, $5rateup2); //pray to God.
+                    Srolls = 0; //resets rolls to 0.
+                    _4Spity++; //builds 4* pity
+                    Backend.resetChance('s'); //clears accumulated pity.
+                    //returns either a 5* weapon or character
+                    return (rngd.nextBoolean() == true)? Backend._5_Star__Characters() : Backend._5_Star__Weapons(); 
                 }
-                
-                //If you reach 80 pulls, but don't have the guarantee, you have a 50/50 chance to get a rate up 5*.
-                //Otherwise, flags guarantee.
-                else if(Wrolls == 79)
+                //If you reach 90 pulls, you get a 5* weapon or character.
+                else if(Srolls == 89)
                 {
-                    Wrolls = 0;
+                    Srolls = 0;
                     _4Spity++;
-                    Backend.resetChance('w');
-                    return Backend._5_Star__Weapons($5wrateup1, $5rateup2);
+                    Backend.resetChance('s');
+                    //returns either a 5* weapon or character
+                    return (rngd.nextBoolean() == true)? Backend._5_Star__Characters() : Backend._5_Star__Weapons();
                 }
                 //  _  _      _____ _                 
                 // | || |    / ____| |                
                 // | || |_  | (___ | |_ __ _ _ __ ___ 
                 // |__   _|  \___ \| __/ _` | '__/ __|
                 //    | |    ____) | || (_| | |  \__ \
-                //    |_|   |_____/ \__\__,_|_|  |___/   
-                
+                //    |_|   |_____/ \__\__,_|_|  |___/                                                        
                 //You obtain a 4*. You also reset the 4* counter
                 else if(rarity == 4)
                 {
-                    _4Spity = 0; //resets 4* count
-                    Wrolls++; //adds pity
-                    //you either get a rate up 4* weapon or char
-                    return (rngd.nextBoolean() == true)? Backend._4_Star__Characters() : Backend._4_Star__Weapons($4wrateup1, $4wrateup2, $4wrateup2, $4wrateup4, $4wrateup5);
+                    _4Spity = 0;
+                    Srolls++;
+                    // 50/50 chance to get a rate up char or weapon
+                    return (rngd.nextBoolean() == true)? Backend._4_Star__Characters() : Backend._4_Star__Weapons();
                 }
                 //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
                 else if( (rarity == 3 || rarity == 4) && _4Spity >= 9)
                 {
                     _4Spity = 0;
-                    Wrolls++;
-                    return (rngd.nextBoolean() == true)? Backend._4_Star__Characters() : Backend._4_Star__Weapons($4wrateup1, $4wrateup2, $4wrateup2, $4wrateup4, $4wrateup5);
+                    Srolls++;
+                    // 50/50 chance to get a rate up char or weapon
+                    return (rngd.nextBoolean() == true)? Backend._4_Star__Characters() : Backend._4_Star__Weapons();
                 }
                 //  _______                         _     
                 // |__   __|                       | |    
                 //    | |     _ __    __ _   ___   | |__  
                 //    | |    | '__|  / _` | / __|  | '_ \ 
                 //    | |    | |    | (_| | \__ \  | | | |
-                //    |_|    |_|     \__,_| |___/  |_| |_|  
-                
+                //    |_|    |_|     \__,_| |___/  |_| |_|                                            
                 //You stepped on dogshit.
                 else 
                 {
                     _4Spity++;
-                    Wrolls++;
+                    Srolls++;
                     return Backend._3_Star__Weapons();
                 }
     }
-
 }
