@@ -18,14 +18,14 @@ public class CharacterBanner {
                 // |___ \   \___ \| __/ _` | '__/ __|
                 //  ___) |  ____) | || (_| | |  \__ \
                 // |____/  |_____/ \__\__,_|_|  |___/
-                //If you randomly got a 5* pull, and you're guaranteed, you get the rate up character
+                //If you randomly got a 5* pull, and you're guaranteed, you get the rate up character.
                 if(guaranteed5 == true && Backend.Rarity(Backend.gachaChance('c'), 'c') == 5) 
                 {
-                    Crolls = 0;
-                    _4Spity++;
-                    guaranteed5 = !guaranteed5;
-                    Backend.gachaChance('r');
-                    return $5rateup;
+                    Crolls = 0; //resets rolls to 0.
+                    _4Spity++; //builds 4* pity
+                    guaranteed5 = !guaranteed5; //resets guarantee
+                    Backend.resetChance('c'); //clears accumulated pity.
+                    return $5rateup; //returns the character rolled
                 }
                 //If you got to 90 pulls and you're guaranteed, you get the rate up character.
                 else if(guaranteed5 == true && Crolls == 89)  
@@ -33,7 +33,7 @@ public class CharacterBanner {
                     Crolls = 0;
                     _4Spity++;
                     guaranteed5 = !guaranteed5;
-                    Backend.gachaChance('r');
+                    Backend.resetChance('c');
                     return $5rateup;
                 }
                 //If you reach 90 pulls, but don't have the guarantee, you have a 50/50 chance to get a rate up 5*.
@@ -42,22 +42,23 @@ public class CharacterBanner {
                 {
                     Crolls = 0;
                     _4Spity++;
-                    Backend.gachaChance('r');
-                    if(rngd.nextBoolean() == true)
+                    Backend.resetChance('c');
+                    if(rngd.nextBoolean() == true) //determines if you'll get the rate up or not. 50/50 chance
                     {
                        guaranteed5 = false;
                        return  $5rateup;
                     }
+                    else
                        guaranteed5 = true;
                        return Backend._5_Star__Characters();
                 }
                 //If you randomly got a 5* pull but don't have a guarantee, you have a 50/50 chance to get a rate up 5*.
-                //Otherwise, flags guarantee.
+                //Otherwise, guarantees that the next 5* you pull on this banner is the rate up.
                 else if(Backend.Rarity(Backend.gachaChance('c'), 'c') == 5)
                 {
                     Crolls = 0;
                     _4Spity++;
-                    Backend.gachaChance('r');
+                    Backend.resetChance('c');
                     if(rngd.nextBoolean() == true)
                     {
                        guaranteed5 = false;
@@ -77,13 +78,15 @@ public class CharacterBanner {
                 {
                     _4Spity = 0;
                     Crolls++;
+                    // 50/50 chance to get a rate up char or weapon
                     return (rngd.nextBoolean() == true)? Backend._4_Star__Characters($4rateup1, $4rateup2, $4rateup2) : Backend._4_Star__Weapons();
                 }
                 //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
-                else if(Backend.Rarity(Backend.gachaChance('c'), 'c') == 3 && _4Spity >= 10)
+                else if(Backend.Rarity(Backend.gachaChance('c'), 'c') == 3 && _4Spity == 9)
                 {
                     _4Spity = 0;
                     Crolls++;
+                    // 50/50 chance to get a rate up char or weapon
                     return (rngd.nextBoolean() == true)? Backend._4_Star__Characters($4rateup1, $4rateup2, $4rateup2) : Backend._4_Star__Weapons();
                 }
                 //  _______                         _     

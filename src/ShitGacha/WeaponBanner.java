@@ -28,10 +28,10 @@ public class WeaponBanner {
                 //You randomly got a 5* pull.
                 if(Backend.Rarity(Backend.gachaChance('w'), 'w') == 5) 
                 {
-                    Wrolls = 0;
-                    _4Spity++;
-                    Backend.gachaChance('r');
-                    return Backend._5_Star__Weapons($5wrateup1, $5rateup2);
+                    Wrolls = 0; //resets pity counter to 0
+                    _4Spity++; // add 4* pity
+                    Backend.resetChance('w'); //resets accumulated odds
+                    return Backend._5_Star__Weapons($5wrateup1, $5rateup2); //pray to God.
                 }
                 
                 //If you reach 80 pulls, but don't have the guarantee, you have a 50/50 chance to get a rate up 5*.
@@ -40,7 +40,7 @@ public class WeaponBanner {
                 {
                     Wrolls = 0;
                     _4Spity++;
-                    Backend.gachaChance('r');
+                    Backend.resetChance('w');
                     return Backend._5_Star__Weapons($5wrateup1, $5rateup2);
                 }
                 //  _  _      _____ _                 
@@ -53,12 +53,13 @@ public class WeaponBanner {
                 //You obtain a 4*. You also reset the 4* counter
                 else if(Backend.Rarity(Backend.gachaChance('w'), 'w') == 4)
                 {
-                    _4Spity = 0;
-                    Wrolls++;
+                    _4Spity = 0; //resets 4* count
+                    Wrolls++; //adds pity
+                    //you either get a rate up 4* weapon or char
                     return (rngd.nextBoolean() == true)? Backend._4_Star__Characters() : Backend._4_Star__Weapons($4wrateup1, $4wrateup2, $4wrateup2, $4wrateup4, $4wrateup5);
                 }
                 //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
-                else if(Backend.Rarity(Backend.gachaChance('w'), 'w') == 3 && _4Spity >= 10)
+                else if(Backend.Rarity(Backend.gachaChance('w'), 'w') == 3 && _4Spity == 9)
                 {
                     _4Spity = 0;
                     Wrolls++;
