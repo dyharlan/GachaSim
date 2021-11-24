@@ -24,9 +24,9 @@ public class WeaponBanner {
                 // |___ \   \___ \| __/ _` | '__/ __|
                 //  ___) |  ____) | || (_| | |  \__ \
                 // |____/  |_____/ \__\__,_|_|  |___/
-         
+                int rarity = Backend.Rarity(Backend.gachaChance('w'), 'w');
                 //You randomly got a 5* pull.
-                if(Backend.Rarity(Backend.gachaChance('w'), 'w') == 5) 
+                if(rarity == 5) 
                 {
                     Wrolls = 0; //resets pity counter to 0
                     _4Spity++; // add 4* pity
@@ -51,7 +51,7 @@ public class WeaponBanner {
                 //    |_|   |_____/ \__\__,_|_|  |___/   
                 
                 //You obtain a 4*. You also reset the 4* counter
-                else if(Backend.Rarity(Backend.gachaChance('w'), 'w') == 4)
+                else if(rarity == 4)
                 {
                     _4Spity = 0; //resets 4* count
                     Wrolls++; //adds pity
@@ -59,7 +59,7 @@ public class WeaponBanner {
                     return (rngd.nextBoolean() == true)? Backend._4_Star__Characters() : Backend._4_Star__Weapons($4wrateup1, $4wrateup2, $4wrateup2, $4wrateup4, $4wrateup5);
                 }
                 //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
-                else if(Backend.Rarity(Backend.gachaChance('w'), 'w') == 3 && _4Spity == 9)
+                else if( (rarity == 3 || rarity == 4) && _4Spity >= 9)
                 {
                     _4Spity = 0;
                     Wrolls++;

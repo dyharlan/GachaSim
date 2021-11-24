@@ -18,8 +18,9 @@ public class CharacterBanner {
                 // |___ \   \___ \| __/ _` | '__/ __|
                 //  ___) |  ____) | || (_| | |  \__ \
                 // |____/  |_____/ \__\__,_|_|  |___/
+                int rarity = Backend.Rarity(Backend.gachaChance('c'), 'c');
                 //If you randomly got a 5* pull, and you're guaranteed, you get the rate up character.
-                if(guaranteed5 == true && Backend.Rarity(Backend.gachaChance('c'), 'c') == 5) 
+                if(guaranteed5 == true && rarity == 5) 
                 {
                     Crolls = 0; //resets rolls to 0.
                     _4Spity++; //builds 4* pity
@@ -54,7 +55,7 @@ public class CharacterBanner {
                 }
                 //If you randomly got a 5* pull but don't have a guarantee, you have a 50/50 chance to get a rate up 5*.
                 //Otherwise, guarantees that the next 5* you pull on this banner is the rate up.
-                else if(Backend.Rarity(Backend.gachaChance('c'), 'c') == 5)
+                else if(rarity == 5)
                 {
                     Crolls = 0;
                     _4Spity++;
@@ -74,7 +75,7 @@ public class CharacterBanner {
                 //    | |    ____) | || (_| | |  \__ \
                 //    |_|   |_____/ \__\__,_|_|  |___/                                                        
                 //You obtain a 4*. You also reset the 4* counter
-                else if(Backend.Rarity(Backend.gachaChance('c'), 'c') == 4)
+                else if(rarity == 4)
                 {
                     _4Spity = 0;
                     Crolls++;
@@ -82,7 +83,7 @@ public class CharacterBanner {
                     return (rngd.nextBoolean() == true)? Backend._4_Star__Characters($4rateup1, $4rateup2, $4rateup2) : Backend._4_Star__Weapons();
                 }
                 //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
-                else if( (Backend.Rarity(Backend.gachaChance('c'), 'c') == 3 || Backend.Rarity(Backend.gachaChance('c'), 'c') == 4) && _4Spity == 9)
+                else if( (rarity == 3 || rarity == 4) && _4Spity >= 9)
                 {
                     _4Spity = 0;
                     Crolls++;
