@@ -11,4 +11,5 @@ package ShitGacha;
  */
 public class WeaponBanner {
     public static int Wrolls=0;
+    // String  $4wrateup1, String  $4wrateup2, String  $4wrateup3, String  $4wrateup4, String  $4wrateup5
 }
