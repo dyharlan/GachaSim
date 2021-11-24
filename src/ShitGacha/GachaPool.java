@@ -28,7 +28,7 @@ public class GachaPool {
     {
         String[] _4character = {"Barbara", "Razor", "Bennett", "Noelle", "Fischl", "Sucrose", 
         "Beidou", "Ningguang", "Xiangling", "Xingqiu", "Chongyun", "Diona", "Xinyan", "Rosaria", 
-        "Yanfei", "Sayu", "Sara"};
+        "Yanfei", "Sayu", "Sara", };
         return _4character[garborates.nextInt(_4character.length)];
     }
     
@@ -36,7 +36,7 @@ public class GachaPool {
     {
         String[] _4character = {"Barbara", "Razor", "Bennett", "Noelle", "Fischl", "Sucrose", 
         "Beidou", "Ningguang", "Xiangling", "Xingqiu", "Chongyun", "Diona", "Xinyan", "Rosaria", 
-        "Yanfei", "Sayu", "Sara", rateup1, rateup2, rateup3};
+        "Yanfei", "Sayu", "Sara", "Thoma", rateup1, rateup2, rateup3};
         return _4character[garborates.nextInt(_4character.length)];
     }
     

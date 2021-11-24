@@ -4,6 +4,6 @@
  This simulates a genshin impact roll session.
  
  TODO:
- - soft pity
- - weapon banner
- - std banner
+- A better front-end (Preferrably swing based?)
+- Implement Fate Points (Could be too complex to be worth.)
+- Streamline the Lookup tables even more.
