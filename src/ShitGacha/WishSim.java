@@ -7,6 +7,7 @@ import java.util.Scanner;
  * TODO: FIND SOMEONE TO VERIFY THE ACCURACY OF THE RATES
  * TODO: CLEANUP/FIX OUTPUT
  * TODO: ADD AN ACTUAL LICENSE
+ * TODO: IMPLEMENT FATE POINTS
  * @author dyhar
  */
 public class WishSim 

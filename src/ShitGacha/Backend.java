@@ -7,7 +7,7 @@ import java.util.Random;
  */
 public class Backend {
     //Creating an instance of the Character Banner Class
-     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
+    //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static CharacterBanner CbannerStatus = new CharacterBanner(); 
     //Creating an instance of the Weapon Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
@@ -18,7 +18,6 @@ public class Backend {
     //This method determines the chance that will be used by Rarity() to determine the rarity of the wish.
     //Starting with the 74/64th pull, an additional 6.25% is deducted until the percentage is equal to or less than 0.
     //char b determines what banner is used to appropriately kickstart the soft pity.
-    //Typing char 'r' resets the accumulated soft pity % to 0.
     public static float gachaChance(char b)
     {
         //this switch determines when the soft pity will start.

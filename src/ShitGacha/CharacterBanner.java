@@ -82,7 +82,7 @@ public class CharacterBanner {
                     return (rngd.nextBoolean() == true)? Backend._4_Star__Characters($4rateup1, $4rateup2, $4rateup2) : Backend._4_Star__Weapons();
                 }
                 //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
-                else if(Backend.Rarity(Backend.gachaChance('c'), 'c') == 3 && _4Spity == 9)
+                else if( (Backend.Rarity(Backend.gachaChance('c'), 'c') == 3 || Backend.Rarity(Backend.gachaChance('c'), 'c') == 4) && _4Spity == 9)
                 {
                     _4Spity = 0;
                     Crolls++;
