@@ -6,13 +6,15 @@
 package ShitGacha;
 
 import java.util.Random;
-
+import static ShitGacha.GachaPool.*;
 /**
  *
  * @author dyhar
  */
+
 public class StdBanner {
     public static int Srolls=0,_4Spity=0; 
+    //public static GachaPool gachaPool = new GachaPool();
     public static Random rngd = new Random();
     public static String StdRoll()
     {
@@ -30,7 +32,7 @@ public class StdBanner {
                     _4Spity++; //builds 4* pity
                     Backend.resetChance('s'); //clears accumulated pity.
                     //returns either a 5* weapon or character
-                    return (rngd.nextBoolean() == true)? Backend._5_Star__Characters() : Backend._5_Star__Weapons(); 
+                    return (rngd.nextBoolean() == true)? _5_Star__Characters() : _5_Star__Weapons(); 
                 }
                 //If you reach 90 pulls, you get a 5* weapon or character.
                 else if(Srolls == 89)
@@ -39,7 +41,7 @@ public class StdBanner {
                     _4Spity++;
                     Backend.resetChance('s');
                     //returns either a 5* weapon or character
-                    return (rngd.nextBoolean() == true)? Backend._5_Star__Characters() : Backend._5_Star__Weapons();
+                    return (rngd.nextBoolean() == true)? _5_Star__Characters() : _5_Star__Weapons();
                 }
                 //  _  _      _____ _                 
                 // | || |    / ____| |                
@@ -53,7 +55,7 @@ public class StdBanner {
                     _4Spity = 0;
                     Srolls++;
                     // 50/50 chance to get a rate up char or weapon
-                    return (rngd.nextBoolean() == true)? Backend._4_Star__Characters() : Backend._4_Star__Weapons();
+                    return (rngd.nextBoolean() == true)? _4_Star__Characters() : _4_Star__Weapons();
                 }
                 //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
                 else if( (rarity == 3 || rarity == 4) && _4Spity >= 9)
@@ -61,7 +63,7 @@ public class StdBanner {
                     _4Spity = 0;
                     Srolls++;
                     // 50/50 chance to get a rate up char or weapon
-                    return (rngd.nextBoolean() == true)? Backend._4_Star__Characters() : Backend._4_Star__Weapons();
+                    return (rngd.nextBoolean() == true)? _4_Star__Characters() : _4_Star__Weapons();
                 }
                 //  _______                         _     
                 // |__   __|                       | |    
@@ -74,7 +76,7 @@ public class StdBanner {
                 {
                     _4Spity++;
                     Srolls++;
-                    return Backend._3_Star__Weapons();
+                    return _3_Star__Weapons();
                 }
     }
 }

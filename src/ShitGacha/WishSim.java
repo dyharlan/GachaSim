@@ -12,8 +12,6 @@ import java.util.Scanner;
  */
 public class WishSim 
 {
-    public static int choice;
-    
     public static void main(String[] args) {
         //Creating an instance of the Character Banner Class
         //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
@@ -28,6 +26,7 @@ public class WishSim
         boolean isFinished = false; 
         //declaring a new scanner class.
         Scanner input = new Scanner(System.in);
+        int choice;
         while(!isFinished) //keeps the program running until the isFinished flag is turned on.
         {
             //The simulator header. W.I.P.
@@ -58,7 +57,7 @@ public class WishSim
                     System.out.println(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle"));
                     break;
                 case 2:          
-                    System.out.println(WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Road", "Sac. Greatsword", "Dragon's Bane"));
+                    System.out.println(WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Roar", "Sac. Greatsword", "Dragon's Bane"));
                     break;
                 case 3:
                     System.out.println(StdBanner.StdRoll());
@@ -69,7 +68,7 @@ public class WishSim
                     break;
                 case 5:
                     for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
-                        System.out.println(WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Road", "Sac. Greatsword", "Dragon's Bane"));
+                        System.out.println(WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Roar", "Sac. Greatsword", "Dragon's Bane"));
                     break;
                 case 6:
                      for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times

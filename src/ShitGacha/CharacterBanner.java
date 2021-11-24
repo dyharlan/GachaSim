@@ -1,6 +1,7 @@
 
 package ShitGacha;
 import java.util.Random;
+import static ShitGacha.GachaPool.*;
 /**
  *
  * @author dyhar
@@ -51,7 +52,7 @@ public class CharacterBanner {
                     }
                     else
                        guaranteed5 = true;
-                       return Backend._5_Star__Characters();
+                       return _5_Star__Characters();
                 }
                 //If you randomly got a 5* pull but don't have a guarantee, you have a 50/50 chance to get a rate up 5*.
                 //Otherwise, guarantees that the next 5* you pull on this banner is the rate up.
@@ -66,7 +67,7 @@ public class CharacterBanner {
                        return  $5rateup;
                     }
                        guaranteed5 = true;
-                       return Backend._5_Star__Characters();
+                       return _5_Star__Characters();
                 }
                 //  _  _      _____ _                 
                 // | || |    / ____| |                
@@ -80,7 +81,7 @@ public class CharacterBanner {
                     _4Spity = 0;
                     Crolls++;
                     // 50/50 chance to get a rate up char or weapon
-                    return (rngd.nextBoolean() == true)? Backend._4_Star__Characters($4rateup1, $4rateup2, $4rateup2) : Backend._4_Star__Weapons();
+                    return (rngd.nextBoolean() == true)? _4_Star__Characters($4rateup1, $4rateup2, $4rateup2) : _4_Star__Weapons();
                 }
                 //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
                 else if( (rarity == 3 || rarity == 4) && _4Spity >= 9)
@@ -88,7 +89,7 @@ public class CharacterBanner {
                     _4Spity = 0;
                     Crolls++;
                     // 50/50 chance to get a rate up char or weapon
-                    return (rngd.nextBoolean() == true)? Backend._4_Star__Characters($4rateup1, $4rateup2, $4rateup2) : Backend._4_Star__Weapons();
+                    return (rngd.nextBoolean() == true)? _4_Star__Characters($4rateup1, $4rateup2, $4rateup2) : _4_Star__Weapons();
                 }
                 //  _______                         _     
                 // |__   __|                       | |    
@@ -101,7 +102,7 @@ public class CharacterBanner {
                 {
                     _4Spity++;
                     Crolls++;
-                    return Backend._3_Star__Weapons();
+                    return _3_Star__Weapons();
                 }
     }
 
