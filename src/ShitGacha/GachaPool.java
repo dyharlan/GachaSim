@@ -46,24 +46,24 @@ public class GachaPool {
     public static String _5_Star__Weapons()
     {
         String[] _5weapon = {"Amos' Bow", "Aquila Favonia", "Lost Prayer to the Sacred Winds", 
-            "Primordial Jade Spear", "S. Atlas", "S. Blade", "S. Harp", "S. Pride", 
-            "S. Spine", "Wolf's Gravestone"};
+            "Primordial Jade Spear", "Skyward Atlas", "Skyward Blade", "Skyward Harp", "Skyward Pride", 
+            "Skyward Spine", "Wolf's Gravestone"};
         return _5weapon[garborates.nextInt(_5weapon.length)]; //returns a random weapon from the pool
     }
     
     public static String _5_Star__Weapons(String rateup1, String rateup2)
     {
         String[] _5weapon = {"Amos' Bow", "Aquila Favonia", "Lost Prayer to the Sacred Winds", 
-            "Primordial Jade Spear", "S. Atlas", "S. Blade", "S. Harp", "S. Pride", 
-            "S. Spine", "Wolf's Gravestone",rateup1,rateup2};
+            "Primordial Jade Spear", "Skyward Atlas", "Skyward Blade", "Skyward Harp", "Skyward Pride", 
+            "Skyward Spine", "Wolf's Gravestone",rateup1,rateup2};
         return _5weapon[garborates.nextInt(_5weapon.length)];
     }
     
     public static String _4_Star__Weapons()
     {
         String[] _4weapon = {"Dragon's Bane", "Eye of Perception", 
-            "F. Codex", "F. Greatsword", "F. Lance", "F. Sword", "F. Warbow", 
-            "Lion's Roar", "Rainslasher", "Rust", "Sac. Bow", "Sac. Fragments", "Sac. Greatsword", "Sac. Sword", 
+            "Favonius Codex", "Favonius Greatsword", "Favonius Lance", "Favonius Sword", "Favonius Warbow", 
+            "Lion's Roar", "Rainslasher", "Rust", "Sacrificial Bow", "Sacrificial Fragments", "Sacrificial Greatsword", "Sacrificial Sword", 
             "The Bell", "The Flute", "The Stringless", "The Widsith"};
         return _4weapon[garborates.nextInt(_4weapon.length)];
     }
@@ -71,8 +71,8 @@ public class GachaPool {
     public static String _4_Star__Weapons(String rateup1, String rateup2, String rateup3, String rateup4, String rateup5)
     {
         String[] _4weapon = {"Dragon's Bane", "Eye of Perception", 
-            "F. Codex", "F. Greatsword", "F. Lance", "F. Sword", "F. Warbow", 
-            "Lion's Roar", "Rainslasher", "Rust", "Sac. Bow", "Sac. Fragments", "Sac. Greatsword", "Sac. Sword", 
+            "Favonius Codex", "Favonius Greatsword", "Favonius Lance", "Favonius Sword", "Favonius Warbow", 
+            "Lion's Roar", "Rainslasher", "Rust", "Sacrificial Bow", "Sacrificial Fragments", "Sacrificial Greatsword", "Sacrificial Sword", 
             "The Bell", "The Flute", "The Stringless", "The Widsith", rateup1, rateup2, rateup3, rateup4, rateup5};
         return _4weapon[garborates.nextInt(_4weapon.length)];
     }
