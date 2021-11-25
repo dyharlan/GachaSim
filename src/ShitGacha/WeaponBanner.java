@@ -25,23 +25,13 @@ public class WeaponBanner {
                 //  ___) |  ____) | || (_| | |  \__ \
                 // |____/  |_____/ \__\__,_|_|  |___/
                 int rarity = Backend.Rarity(Backend.gachaChance('w'), 'w');
-                //You randomly got a 5* pull.
-                if(rarity == 5) 
+                //You randomly got a 5* pull or if you reach 80 pulls, you have a 50/50 chance to get a rate up 5*.
+                if(rarity == 5 || Wrolls == 79) 
                 {
                     Wrolls = 0; //resets pity counter to 0
                     _4Spity++; // add 4* pity
                     Backend.resetChance('w'); //resets accumulated odds
                     return _5_Star__Weapons($5wrateup1, $5rateup2); //pray to God.
-                }
-                
-                //If you reach 80 pulls, but don't have the guarantee, you have a 50/50 chance to get a rate up 5*.
-                //Otherwise, flags guarantee.
-                else if(Wrolls == 79)
-                {
-                    Wrolls = 0;
-                    _4Spity++;
-                    Backend.resetChance('w');
-                    return _5_Star__Weapons($5wrateup1, $5rateup2);
                 }
                 //  _  _      _____ _                 
                 // | || |    / ____| |                
@@ -51,20 +41,14 @@ public class WeaponBanner {
                 //    |_|   |_____/ \__\__,_|_|  |___/   
                 
                 //You obtain a 4*. You also reset the 4* counter
-                else if(rarity == 4)
+                else if(rarity == 4 || ( (rarity == 3 || rarity == 4) && _4Spity >= 9) )
                 {
                     _4Spity = 0; //resets 4* count
                     Wrolls++; //adds pity
                     //you either get a rate up 4* weapon or char
                     return (rngd.nextBoolean() == true)? _4_Star__Characters() : _4_Star__Weapons($4wrateup1, $4wrateup2, $4wrateup2, $4wrateup4, $4wrateup5);
                 }
-                //You are guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
-                else if( (rarity == 3 || rarity == 4) && _4Spity >= 9)
-                {
-                    _4Spity = 0;
-                    Wrolls++;
-                    return (rngd.nextBoolean() == true)? _4_Star__Characters() : _4_Star__Weapons($4wrateup1, $4wrateup2, $4wrateup2, $4wrateup4, $4wrateup5);
-                }
+             
                 //  _______                         _     
                 // |__   __|                       | |    
                 //    | |     _ __    __ _   ___   | |__  
