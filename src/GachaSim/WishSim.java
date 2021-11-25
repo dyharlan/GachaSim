@@ -1,6 +1,11 @@
+package GachaSim;
 
-package ShitGacha;
 
+
+
+import GachaSim.Banners.StdBanner;
+import GachaSim.Banners.CharacterBanner;
+import GachaSim.Banners.WeaponBanner;
 import java.util.Scanner;
 /**
  * TODO: SIMPLIFY/STREAMLINE LOOKUP TABLES FOR THE GACHA POOL [Partially Done, Decoupled Gacha Pool from backend] 

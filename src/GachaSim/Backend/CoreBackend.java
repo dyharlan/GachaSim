@@ -1,5 +1,8 @@
 
-package ShitGacha;
+package GachaSim.Backend;
+import GachaSim.Banners.StdBanner;
+import GachaSim.Banners.CharacterBanner;
+import GachaSim.Banners.WeaponBanner;
 import java.util.Random;
 /**
  * This class mainly handles the algorithms to determine the rarity of the pull on each
@@ -12,7 +15,7 @@ import java.util.Random;
  * 
  * @author dyhar
  */
-public class Backend {
+public class CoreBackend {
     
     //Creating an instance of the Character Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.

@@ -1,7 +1,8 @@
 
-package ShitGacha;
+package GachaSim.Banners;
+import GachaSim.Backend.CoreBackend;
 import java.util.Random;
-import static ShitGacha.GachaPool.*;
+import static GachaSim.Backend.GachaPool.*;
 /**
  * This class handles the rolling of the Character Rate-up banner.
  * Arguments in order are: The 5* rate up, and three rate up 4*. Separated by commas.
@@ -20,14 +21,14 @@ public class CharacterBanner {
                 // |___ \   \___ \| __/ _` | '__/ __|
                 //  ___) |  ____) | || (_| | |  \__ \
                 // |____/  |_____/ \__\__,_|_|  |___/
-                int rarity = Backend.Rarity(Backend.gachaChance('c'), 'c');
+                int rarity = CoreBackend.Rarity(CoreBackend.gachaChance('c'), 'c');
                 //If you randomly got a 5* pull or to 90 pulls, and you're guaranteed, you get the rate up character.
                 if( (guaranteed5 == true && rarity == 5) || (guaranteed5 == true && Crolls == 89) ) 
                 {
                     Crolls = 0; //resets rolls to 0.
                     _4Spity++; //builds 4* pity
                     guaranteed5 = !guaranteed5; //resets guarantee
-                    Backend.resetChance('c'); //clears accumulated pity.
+                    CoreBackend.resetChance('c'); //clears accumulated pity.
                     return $5rateup; //returns the character rolled
                 }
                 //If you randomly got a 5* pull or got to 90 pulls but don't have a guarantee, you have a 50/50 chance to get a rate up 5*.
@@ -36,7 +37,7 @@ public class CharacterBanner {
                 {
                     Crolls = 0;
                     _4Spity++;
-                    Backend.resetChance('c');
+                    CoreBackend.resetChance('c');
                     if(rngd.nextBoolean() == true)
                     {
                        guaranteed5 = false;
