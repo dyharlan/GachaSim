@@ -36,74 +36,73 @@ public class WishSimGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane2 = new javax.swing.JScrollPane();
-        CharWishHistory = new javax.swing.JTextArea();
+        SPane = new javax.swing.JTabbedPane();
+        CPane = new javax.swing.JPanel();
         charRoll = new javax.swing.JButton();
+        charRoll10x = new javax.swing.JButton();
         guaranteed5 = new javax.swing.JLabel();
-        CharRolls = new javax.swing.JLabel();
-        CharLast4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        CharRolls = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        charRoll10x = new javax.swing.JButton();
+        CharLast4 = new javax.swing.JLabel();
         CharClearHistory = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        CharWishHistory = new javax.swing.JTextArea();
+        WpnBanner = new javax.swing.JPanel();
+        wpnRoll = new javax.swing.JButton();
+        wpnRoll10x = new javax.swing.JButton();
         WpnRolls = new javax.swing.JLabel();
-        WpnLast4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        wpnRoll10x = new javax.swing.JButton();
-        wpnRoll = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        stdRoll10x = new javax.swing.JButton();
-        stdRoll = new javax.swing.JButton();
-        StdRolls = new javax.swing.JLabel();
-        StdLast4 = new javax.swing.JLabel();
-        WpnClearHistory = new javax.swing.JButton();
+        WpnLast4 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         WpnWishHistory = new javax.swing.JTextArea();
-        StdClearHistory = new javax.swing.JButton();
+        WpnClearHistory = new javax.swing.JButton();
+        jPanel3 = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         StdWishHistory = new javax.swing.JTextArea();
+        StdLast4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        StdRolls = new javax.swing.JLabel();
+        stdRoll10x = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        stdRoll = new javax.swing.JButton();
+        StdClearHistory = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("GachaSim");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
-        CharWishHistory.setColumns(20);
-        CharWishHistory.setRows(5);
-        CharWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jScrollPane2.setViewportView(CharWishHistory);
-
-        charRoll.setText("Roll on the Character Banner");
+        charRoll.setText("Roll");
         charRoll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charRollActionPerformed(evt);
             }
         });
 
-        guaranteed5.setText("false");
-        guaranteed5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        CharRolls.setText("0");
-        CharRolls.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        CharLast4.setText("0");
-        CharLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        jLabel1.setText("Guaranteed 5*?");
-
-        jLabel2.setText("Banner Rolls:");
-
-        jLabel3.setText("Rolls since Last 4*:");
-
-        charRoll10x.setText("Roll on the Character Banner 10x");
+        charRoll10x.setText("Roll 10x");
         charRoll10x.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 charRoll10xActionPerformed(evt);
             }
         });
+
+        guaranteed5.setText("false");
+        guaranteed5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel1.setText("Guaranteed 5*?");
+
+        jLabel2.setText("Banner Rolls:");
+
+        CharRolls.setText("0");
+        CharRolls.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel3.setText("Rolls since Last 4*:");
+
+        CharLast4.setText("0");
+        CharLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         CharClearHistory.setText("Clear Wish History");
         CharClearHistory.addActionListener(new java.awt.event.ActionListener() {
@@ -112,53 +111,96 @@ public class WishSimGUI extends javax.swing.JFrame {
             }
         });
 
-        WpnRolls.setText("0");
-        WpnRolls.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        CharWishHistory.setColumns(20);
+        CharWishHistory.setRows(5);
+        CharWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jScrollPane2.setViewportView(CharWishHistory);
 
-        WpnLast4.setText("0");
-        WpnLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        javax.swing.GroupLayout CPaneLayout = new javax.swing.GroupLayout(CPane);
+        CPane.setLayout(CPaneLayout);
+        CPaneLayout.setHorizontalGroup(
+            CPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CPaneLayout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addGap(19, 19, 19)
+                        .addComponent(guaranteed5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(CharRolls, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addComponent(CharLast4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(CPaneLayout.createSequentialGroup()
+                        .addComponent(charRoll)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(charRoll10x))
+                    .addGroup(CPaneLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(CPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(CharClearHistory)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        CPaneLayout.setVerticalGroup(
+            CPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CPaneLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(CPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(charRoll)
+                    .addComponent(charRoll10x))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(CPaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(guaranteed5)
+                    .addComponent(jLabel2)
+                    .addComponent(CharLast4)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1)
+                    .addComponent(CharRolls))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(CharClearHistory)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
 
-        jLabel5.setText("Banner Rolls:");
+        charRoll10x.getAccessibleContext().setAccessibleDescription("");
 
-        jLabel6.setText("Rolls since Last 4*:");
+        SPane.addTab("Character Banner", null, CPane, "Pull on the Banner with the currently featured character.");
+        CPane.getAccessibleContext().setAccessibleDescription("");
 
-        wpnRoll10x.setText("Roll on the Weapon Banner 10x");
-        wpnRoll10x.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                wpnRoll10xActionPerformed(evt);
-            }
-        });
-
-        wpnRoll.setText("Roll on the Weapon Banner");
+        wpnRoll.setText("Roll");
         wpnRoll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 wpnRollActionPerformed(evt);
             }
         });
 
-        jLabel7.setText("Banner Rolls:");
-
-        jLabel8.setText("Rolls since Last 4*:");
-
-        stdRoll10x.setText("Roll on the Standard Banner 10x");
-        stdRoll10x.addActionListener(new java.awt.event.ActionListener() {
+        wpnRoll10x.setText("Roll 10x");
+        wpnRoll10x.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stdRoll10xActionPerformed(evt);
+                wpnRoll10xActionPerformed(evt);
             }
         });
 
-        stdRoll.setText("Roll on the Standard Banner");
-        stdRoll.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stdRollActionPerformed(evt);
-            }
-        });
+        WpnRolls.setText("0");
+        WpnRolls.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        StdRolls.setText("0");
-        StdRolls.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLabel5.setText("Banner Rolls:");
 
-        StdLast4.setText("0");
-        StdLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jLabel6.setText("Rolls since Last 4*:");
+
+        WpnLast4.setText("0");
+        WpnLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        WpnWishHistory.setColumns(20);
+        WpnWishHistory.setRows(5);
+        WpnWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jScrollPane3.setViewportView(WpnWishHistory);
 
         WpnClearHistory.setText("Clear Wish History");
         WpnClearHistory.addActionListener(new java.awt.event.ActionListener() {
@@ -167,10 +209,83 @@ public class WishSimGUI extends javax.swing.JFrame {
             }
         });
 
-        WpnWishHistory.setColumns(20);
-        WpnWishHistory.setRows(5);
-        WpnWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jScrollPane3.setViewportView(WpnWishHistory);
+        javax.swing.GroupLayout WpnBannerLayout = new javax.swing.GroupLayout(WpnBanner);
+        WpnBanner.setLayout(WpnBannerLayout);
+        WpnBannerLayout.setHorizontalGroup(
+            WpnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WpnBannerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(WpnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(WpnBannerLayout.createSequentialGroup()
+                        .addGap(189, 189, 189)
+                        .addComponent(jLabel5)
+                        .addGap(18, 18, 18)
+                        .addComponent(WpnRolls, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel6)
+                        .addGap(18, 18, 18)
+                        .addComponent(WpnLast4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(WpnBannerLayout.createSequentialGroup()
+                        .addComponent(wpnRoll)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(wpnRoll10x))
+                    .addGroup(WpnBannerLayout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(WpnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(WpnClearHistory))))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        WpnBannerLayout.setVerticalGroup(
+            WpnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WpnBannerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(WpnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(wpnRoll)
+                    .addComponent(wpnRoll10x))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(WpnBannerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(WpnLast4)
+                    .addComponent(jLabel6)
+                    .addComponent(WpnRolls))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(WpnClearHistory)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        SPane.addTab("Weapon Banner", null, WpnBanner, "Pull on the Banner with the currently featured weapons.");
+
+        StdWishHistory.setColumns(20);
+        StdWishHistory.setRows(5);
+        StdWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jScrollPane4.setViewportView(StdWishHistory);
+
+        StdLast4.setText("0");
+        StdLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel8.setText("Rolls since Last 4*:");
+
+        StdRolls.setText("0");
+        StdRolls.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        stdRoll10x.setText("Roll 10x");
+        stdRoll10x.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stdRoll10xActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Banner Rolls:");
+
+        stdRoll.setText("Roll");
+        stdRoll.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                stdRollActionPerformed(evt);
+            }
+        });
 
         StdClearHistory.setText("Clear Wish History");
         StdClearHistory.addActionListener(new java.awt.event.ActionListener() {
@@ -179,139 +294,78 @@ public class WishSimGUI extends javax.swing.JFrame {
             }
         });
 
-        StdWishHistory.setColumns(20);
-        StdWishHistory.setRows(5);
-        StdWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jScrollPane4.setViewportView(StdWishHistory);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(189, 189, 189)
-                            .addComponent(jLabel5)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                            .addComponent(WpnRolls, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel6)
-                            .addGap(18, 18, 18)
-                            .addComponent(WpnLast4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(wpnRoll)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(wpnRoll10x))
-                        .addComponent(WpnClearHistory)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(6, 6, 6)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(18, 18, 18)
-                                .addComponent(guaranteed5, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(CharRolls, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(CharLast4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(charRoll)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(charRoll10x))
-                            .addComponent(CharClearHistory)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(189, 189, 189)
                                 .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGap(18, 18, 18)
                                 .addComponent(StdRolls, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel8)
                                 .addGap(18, 18, 18)
                                 .addComponent(StdLast4, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
+                            .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(stdRoll)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(stdRoll10x))
+                                .addComponent(stdRoll10x))))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(StdClearHistory)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(20, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(stdRoll)
+                    .addComponent(stdRoll10x))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(StdLast4)
+                    .addComponent(jLabel8)
+                    .addComponent(StdRolls, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(StdClearHistory)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 295, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40))
+        );
+
+        SPane.addTab("Standard Banner", null, jPanel3, "Pull on the Standard Banner.");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(SPane, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 612, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(wpnRoll)
-                    .addComponent(wpnRoll10x))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(WpnRolls, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(WpnLast4)
-                    .addComponent(jLabel6))
-                .addGap(18, 18, 18)
-                .addComponent(WpnClearHistory)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(70, 70, 70)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(charRoll)
-                            .addComponent(charRoll10x))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(guaranteed5)
-                            .addComponent(jLabel2)
-                            .addComponent(CharRolls, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(CharLast4)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18)
-                        .addComponent(CharClearHistory)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(stdRoll)
-                            .addComponent(stdRoll10x))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(StdRolls, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(StdLast4)
-                            .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(StdClearHistory)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27))))
+                .addGap(24, 24, 24)
+                .addComponent(SPane, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        charRoll10x.getAccessibleContext().setAccessibleDescription("");
+        SPane.getAccessibleContext().setAccessibleName("tab2");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
     private void charRollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charRollActionPerformed
-
+        //Arguments Indicate Rate-up
         CharWishHistory.append(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle") + "\n");
         guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
         CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
@@ -321,6 +375,7 @@ public class WishSimGUI extends javax.swing.JFrame {
     private void charRoll10xActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_charRoll10xActionPerformed
         for(int ctr = 0; ctr < 10; ctr++)
         {
+            //Arguments Indicate Rate-up
             CharWishHistory.append(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle") + "\n");
             guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
             CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
@@ -331,6 +386,7 @@ public class WishSimGUI extends javax.swing.JFrame {
     private void wpnRoll10xActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wpnRoll10xActionPerformed
           for(int ctr = 0; ctr < 10; ctr++)
           {
+            //Arguments Indicate Rate-up
             WpnWishHistory.append( WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Roar", "Sacrificial Greatsword", "Dragon's Bane") + "\n");
             WpnRolls.setText(String.valueOf(WbannerStatus.Wrolls));
             WpnLast4.setText( String.valueOf(WbannerStatus._4Spity) );
@@ -338,6 +394,7 @@ public class WishSimGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_wpnRoll10xActionPerformed
 
     private void wpnRollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_wpnRollActionPerformed
+        //Arguments Indicate Rate-up
         WpnWishHistory.append( WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Roar", "Sacrificial Greatsword", "Dragon's Bane") + "\n");
         WpnRolls.setText(String.valueOf(WbannerStatus.Wrolls));
         WpnLast4.setText( String.valueOf(WbannerStatus._4Spity) );
@@ -346,14 +403,14 @@ public class WishSimGUI extends javax.swing.JFrame {
     private void stdRoll10xActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stdRoll10xActionPerformed
        for(int ctr = 0 ; ctr < 10 ; ctr++)
        {
-        StdWishHistory.append( StdBanner.StdRoll() + "\n");
+        StdWishHistory.append(StdBanner.StdRoll() + "\n");
         StdRolls.setText(String.valueOf(SbannerStatus.Srolls));
         StdLast4.setText( String.valueOf(SbannerStatus._4Spity) );
        }
     }//GEN-LAST:event_stdRoll10xActionPerformed
 
     private void stdRollActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stdRollActionPerformed
-        StdWishHistory.append( StdBanner.StdRoll() + "\n");
+        StdWishHistory.append(StdBanner.StdRoll() + "\n");
         StdRolls.setText(String.valueOf(SbannerStatus.Srolls));
         StdLast4.setText( String.valueOf(SbannerStatus._4Spity) );
     }//GEN-LAST:event_stdRollActionPerformed
@@ -407,14 +464,17 @@ public class WishSimGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CPane;
     private javax.swing.JButton CharClearHistory;
     private javax.swing.JLabel CharLast4;
     private javax.swing.JLabel CharRolls;
     private javax.swing.JTextArea CharWishHistory;
+    private javax.swing.JTabbedPane SPane;
     private javax.swing.JButton StdClearHistory;
     private javax.swing.JLabel StdLast4;
     private javax.swing.JLabel StdRolls;
     private javax.swing.JTextArea StdWishHistory;
+    private javax.swing.JPanel WpnBanner;
     private javax.swing.JButton WpnClearHistory;
     private javax.swing.JLabel WpnLast4;
     private javax.swing.JLabel WpnRolls;
@@ -429,6 +489,7 @@ public class WishSimGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
