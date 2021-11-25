@@ -75,6 +75,8 @@ public class WishSimGUI extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
+        SPane.setToolTipText("Choose which Banner to Pull From.");
+
         charRoll.setText("Roll");
         charRoll.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +91,7 @@ public class WishSimGUI extends javax.swing.JFrame {
             }
         });
 
+        guaranteed5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         guaranteed5.setText("false");
         guaranteed5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -96,11 +99,13 @@ public class WishSimGUI extends javax.swing.JFrame {
 
         jLabel2.setText("Banner Rolls:");
 
+        CharRolls.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CharRolls.setText("0");
         CharRolls.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel3.setText("Rolls since Last 4*:");
 
+        CharLast4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         CharLast4.setText("0");
         CharLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -187,6 +192,7 @@ public class WishSimGUI extends javax.swing.JFrame {
             }
         });
 
+        WpnRolls.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         WpnRolls.setText("0");
         WpnRolls.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -194,6 +200,7 @@ public class WishSimGUI extends javax.swing.JFrame {
 
         jLabel6.setText("Rolls since Last 4*:");
 
+        WpnLast4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         WpnLast4.setText("0");
         WpnLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
@@ -263,11 +270,13 @@ public class WishSimGUI extends javax.swing.JFrame {
         StdWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jScrollPane4.setViewportView(StdWishHistory);
 
+        StdLast4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         StdLast4.setText("0");
         StdLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel8.setText("Rolls since Last 4*:");
 
+        StdRolls.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         StdRolls.setText("0");
         StdRolls.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
