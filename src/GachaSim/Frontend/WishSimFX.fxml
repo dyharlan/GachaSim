@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GachaSim.JavaFX.WishSimFXController">
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="546.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GachaSim.Frontend.WishSimFXController">
    <children>
       <TabPane prefHeight="614.0" prefWidth="550.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -17,7 +17,7 @@
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="585.0" prefWidth="924.0">
                      <children>
-                        <Button fx:id="CharRoll" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleCharRoll" prefHeight="39.0" prefWidth="184.0" style="-fx-background-radius: 100;">
+                        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleCharRoll" prefHeight="39.0" prefWidth="184.0" style="-fx-background-radius: 100;">
                            <graphic>
                               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -26,7 +26,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="CharRoll10" layoutX="249.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleCharRoll10" prefHeight="41.0" prefWidth="182.0" style="-fx-background-radius: 100;">
+                        <Button layoutX="249.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleCharRoll10" prefHeight="41.0" prefWidth="182.0" style="-fx-background-radius: 100;">
                            <graphic>
                               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -39,7 +39,7 @@
                         <Label fx:id="guaranteed5" alignment="CENTER" layoutX="86.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="false" />
                         <Label fx:id="CharRolls" alignment="CENTER" layoutX="249.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
                         <Label fx:id="CharLast4" alignment="CENTER" layoutX="422.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
-                        <Button fx:id="CharClearHistory" layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleCharClearHistory" prefHeight="39.0" prefWidth="142.0" text="Clear Wish History" />
+                        <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleCharClearHistory" prefHeight="39.0" prefWidth="142.0" text="Clear Wish History" />
                      </children>
                   </AnchorPane>
             </content>
@@ -48,7 +48,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="585.0" prefWidth="924.0">
                      <children>
-                        <Button fx:id="WpnRoll" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleWpnRoll" prefHeight="39.0" prefWidth="184.0" style="-fx-background-radius: 100;">
+                        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleWpnRoll" prefHeight="39.0" prefWidth="184.0" style="-fx-background-radius: 100;">
                            <graphic>
                               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -57,7 +57,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="WpnRoll10" layoutX="249.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleWpnRoll10" prefHeight="41.0" prefWidth="182.0" style="-fx-background-radius: 100;">
+                        <Button layoutX="249.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleWpnRoll10" prefHeight="41.0" prefWidth="182.0" style="-fx-background-radius: 100;">
                            <graphic>
                               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -69,7 +69,7 @@
                         <TextArea fx:id="WpnWishHistory" editable="false" layoutX="24.0" layoutY="179.0" prefHeight="392.0" prefWidth="434.0" />
                         <Label fx:id="WpnRolls" alignment="CENTER" layoutX="249.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
                         <Label fx:id="WpnLast4" alignment="CENTER" layoutX="422.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
-                        <Button fx:id="WpnClearHistory" layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleWpnClearHistory" prefHeight="39.0" prefWidth="142.0" text="Clear Wish History" />
+                        <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleWpnClearHistory" prefHeight="39.0" prefWidth="142.0" text="Clear Wish History" />
                      </children>
                   </AnchorPane>
                </content>
@@ -78,7 +78,7 @@
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="585.0" prefWidth="924.0">
                      <children>
-                        <Button fx:id="StdRoll" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStdRoll" prefHeight="39.0" prefWidth="184.0" style="-fx-background-radius: 100;">
+                        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStdRoll" prefHeight="39.0" prefWidth="184.0" style="-fx-background-radius: 100;">
                            <graphic>
                               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -87,7 +87,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="StdRoll10" layoutX="249.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStdRoll10" prefHeight="41.0" prefWidth="182.0" style="-fx-background-radius: 100;">
+                        <Button layoutX="249.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleStdRoll10" prefHeight="41.0" prefWidth="182.0" style="-fx-background-radius: 100;">
                            <graphic>
                               <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -99,7 +99,7 @@
                         <TextArea fx:id="StdWishHistory" editable="false" layoutX="24.0" layoutY="179.0" prefHeight="392.0" prefWidth="434.0" />
                         <Label fx:id="StdRolls" alignment="CENTER" layoutX="249.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
                         <Label fx:id="StdLast4" alignment="CENTER" layoutX="422.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
-                        <Button fx:id="StdClearHistory" layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleStdClearHistory" prefHeight="39.0" prefWidth="142.0" text="Clear Wish History" />
+                        <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleStdClearHistory" prefHeight="39.0" prefWidth="142.0" text="Clear Wish History" />
                      </children>
                   </AnchorPane>
                </content>

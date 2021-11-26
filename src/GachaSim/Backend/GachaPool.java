@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package GachaSim.Backend;
-
 import java.util.Random;
 
 /**

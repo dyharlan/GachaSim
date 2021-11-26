@@ -5,20 +5,20 @@
  */
 package GachaSim.Banners;
 
-import GachaSim.Backend.CoreBackend;
+import GachaSim.Backend.CoreBackend; //importing the CoreBackend services for rarity detection
 import java.util.Random;
-import static GachaSim.Backend.GachaPool.*;
+import static GachaSim.Backend.GachaPool.*; //importing GachaPool class for the gacha pool
 /**
- *
+ * This class handles the rolling of the Standard banner.
  * @author dyhar
  */
 
 public class StdBanner {
+    //Declaring these variables as static so others classes can access them.
     public static int Srolls=0,_4Spity=0; 
-    //public static GachaPool gachaPool = new GachaPool();
-    public static Random rngd = new Random();
     public static String StdRoll()
     {
+                Random rngd = new Random();
                 //  _____    _____ _                 
                 // | ____|  / ____| |                
                 // | |__   | (___ | |_ __ _ _ __ ___ 

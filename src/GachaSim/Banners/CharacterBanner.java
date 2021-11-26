@@ -1,20 +1,21 @@
 
 package GachaSim.Banners;
-import GachaSim.Backend.CoreBackend;
+import GachaSim.Backend.CoreBackend; //importing the CoreBackend services for rarity detection
 import java.util.Random;
-import static GachaSim.Backend.GachaPool.*;
+import static GachaSim.Backend.GachaPool.*; //importing GachaPool class for the gacha pool
 /**
  * This class handles the rolling of the Character Rate-up banner.
  * Arguments in order are: The 5* rate up, and three rate up 4*. Separated by commas.
  * @author dyhar
  */
 public class CharacterBanner {
-    public static boolean guaranteed5 = false; 
+    //Declaring these variables as static so others classes can access them.
+    public static boolean guaranteed5 = false;
     public static int Crolls=0,_4Spity=0; 
-    public static Random rngd = new Random();
      //rolls a banner once. Arguments are the 4 rate up chars
     public static String CharRoll(String $5rateup, String  $4rateup1, String $4rateup2, String $4rateup3)
     {
+                Random rngd = new Random();
                 //  _____    _____ _                 
                 // | ____|  / ____| |                
                 // | |__   | (___ | |_ __ _ _ __ ___ 

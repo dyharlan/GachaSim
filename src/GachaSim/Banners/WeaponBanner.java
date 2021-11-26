@@ -12,13 +12,14 @@ import static GachaSim.Backend.GachaPool.*;
  * @author dyhar
  */
 public class WeaponBanner {
+    //Declaring these variables as static so others classes can access them.
     public static int _4Spity=0; 
-    public static Random rngd = new Random();
     public static int Wrolls=0;
     //rolls a banner once.
     public static String WpnRoll(String $5wrateup1, String $5rateup2 
             ,String  $4wrateup1, String  $4wrateup2, String  $4wrateup3, String  $4wrateup4, String  $4wrateup5)
      {
+        Random rngd = new Random();
                 //  _____    _____ _                 
                 // | ____|  / ____| |                
                 // | |__   | (___ | |_ __ _ _ __ ___ 

@@ -1,4 +1,4 @@
-package GachaSim;
+package GachaSim.Frontend;
 
 
 
@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 public class WishSim 
 {
-    public static void main(String[] args) {
+    public static void cli() {
         //Creating an instance of the Character Banner Class
         //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
         CharacterBanner CbannerStatus = new CharacterBanner(); 

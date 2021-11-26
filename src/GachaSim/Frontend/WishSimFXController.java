@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package GachaSim.JavaFX;
 
+package GachaSim.Frontend;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -26,7 +26,7 @@ import javafx.event.ActionEvent;
 public class WishSimFXController implements Initializable {
     //Creating an instance of the Character Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
-    static CharacterBanner CbannerStatus = new CharacterBanner(); 
+    CharacterBanner CbannerStatus = new CharacterBanner(); 
     //Creating an instance of the Weapon Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static WeaponBanner WbannerStatus = new WeaponBanner();
@@ -46,35 +46,17 @@ public class WishSimFXController implements Initializable {
     @FXML
     private Label CharLast4;
     @FXML
-    private Button CharClearHistory;
-    @FXML
     private TextArea WpnWishHistory;
     @FXML
     private Label WpnRolls;
     @FXML
     private Label WpnLast4;
     @FXML
-    private Button WpnClearHistory;
-    @FXML
     private TextArea StdWishHistory;
     @FXML
     private Label StdRolls;
     @FXML
     private Label StdLast4;
-    @FXML
-    private Button StdClearHistory;
-    @FXML
-    private Button CharRoll;
-    @FXML
-    private Button CharRoll10;
-    @FXML
-    private Button WpnRoll;
-    @FXML
-    private Button WpnRoll10;
-    @FXML
-    private Button StdRoll;
-    @FXML
-    private Button StdRoll10;
 
     /**
      * Initializes the controller class.

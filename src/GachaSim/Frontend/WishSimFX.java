@@ -1,4 +1,4 @@
-package GachaSim;
+package GachaSim.Frontend;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -20,9 +20,13 @@ import javafx.stage.Stage;
  */
 public class WishSimFX extends Application {
     
+    public static void fx() {
+        launch();
+    }
+    
     @Override
     public void start(Stage stage) throws Exception {
-       Parent root = FXMLLoader.load(getClass().getResource("JavaFX/WishSimFX.fxml"));
+       Parent root = FXMLLoader.load(getClass().getResource("WishSimFX.fxml"));
         
         Scene scene = new Scene(root);
         //scene.getStylesheets().add("ShitGacha/Frontend/flat.css";
@@ -31,8 +35,5 @@ public class WishSimFX extends Application {
         stage.show();
             }
 
-    public static void main(String[] args) {
-        launch(args);
-    }
-    
+   
 }

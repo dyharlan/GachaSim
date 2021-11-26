@@ -17,21 +17,20 @@ import java.util.Random;
  */
 public class CoreBackend {
     
-    //Creating an instance of the Character Banner Class
+   //=======================Game-specific Variables================================//
+    //Creating an instance of the Character, Weapon and Standard Banner Classes
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static CharacterBanner CbannerStatus = new CharacterBanner(); 
-    //Creating an instance of the Weapon Banner Class
-    //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static WeaponBanner WbannerStatus = new WeaponBanner();
-    //Creating an instance of the Standard Banner Class
-    //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static StdBanner SbannerStatus = new StdBanner();
-    static Random garborates = new Random(); //Declaring a new random class
     static float Csoftpity=0.0f;  //resets the Character softpity to 0f
     static float Wsoftpity=0.0f;  //resets the Weapon softpity to 0f
     static float Ssoftpity=0.0f;  //resets the Std banner softpity to 0f
+  //==============================================================================//  
     
+    static Random garborates = new Random(); //Declaring a new random class
     
+ //==============================================================================//
     //This method determines the chance that will be used by Rarity() to determine the rarity of the wish.
     //Starting with the 74/64th pull, an additional 6.25% is deducted until the percentage is equal to or less than 0.
     //char b determines what banner is used to appropriately kickstart the soft pity.
@@ -65,7 +64,7 @@ public class CoreBackend {
                 Ssoftpity+=0.0625f;
                 return garborates.nextFloat()-Ssoftpity; 
             }
-            //if it's less than 64 pulls, it returns the odds without manipulation.
+            //if it's less than 74 pulls, it returns the odds without manipulation.
                 return garborates.nextFloat();
         }
         return 0.0f;
@@ -116,4 +115,5 @@ public class CoreBackend {
                 break;
         }
     }
+      
 }

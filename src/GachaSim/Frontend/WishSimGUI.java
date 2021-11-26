@@ -1,4 +1,4 @@
-package GachaSim;
+package GachaSim.Frontend;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -448,7 +448,7 @@ public class WishSimGUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void swing() {
        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
