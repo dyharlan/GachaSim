@@ -3,34 +3,39 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ShitGacha;
+package GachaSim.Banners;
 
+import GachaSim.Backend.CoreBackend; //importing the CoreBackend services for rarity detection
 import java.util.Random;
-import static ShitGacha.GachaPool.*;
+import static GachaSim.Backend.GachaPool.*; //importing GachaPool class for the gacha pool
 /**
- *
+ * This class handles the rolling of the Standard banner.
  * @author dyhar
  */
 
 public class StdBanner {
+    //Declaring these variables as static so others classes can access them.
     public static int Srolls=0,_4Spity=0; 
-    //public static GachaPool gachaPool = new GachaPool();
-    public static Random rngd = new Random();
+    /**
+     * Rolls on the standard banner once.
+     * @return The character/weapon you pulled. 
+     */
     public static String StdRoll()
     {
+                Random rngd = new Random();
                 //  _____    _____ _                 
                 // | ____|  / ____| |                
                 // | |__   | (___ | |_ __ _ _ __ ___ 
                 // |___ \   \___ \| __/ _` | '__/ __|
                 //  ___) |  ____) | || (_| | |  \__ \
                 // |____/  |_____/ \__\__,_|_|  |___/
-                int rarity = Backend.Rarity(Backend.gachaChance('s'), 'c');
+                int rarity = CoreBackend.Rarity(CoreBackend.gachaChance('s'), 'c');
                 //You get a std 5*. Either if you reach 90 pulls or randomly, you get a 5* weapon or character.
                 if(rarity == 5 || Srolls == 89) 
                 {
                     Srolls = 0; //resets rolls to 0.
                     _4Spity++; //builds 4* pity
-                    Backend.resetChance('s'); //clears accumulated pity.
+                    CoreBackend.resetChance('s'); //clears accumulated pity.
                     //returns either a 5* weapon or character
                     return (rngd.nextBoolean() == true)? _5_Star__Characters() : _5_Star__Weapons(); 
                 }

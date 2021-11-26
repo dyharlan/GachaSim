@@ -1,18 +1,22 @@
+package GachaSim.Frontend;
 
-package ShitGacha;
 
+
+
+import GachaSim.Banners.StdBanner;
+import GachaSim.Banners.CharacterBanner;
+import GachaSim.Banners.WeaponBanner;
 import java.util.Scanner;
 /**
  * TODO: SIMPLIFY/STREAMLINE LOOKUP TABLES FOR THE GACHA POOL [Partially Done, Decoupled Gacha Pool from backend] 
  * TODO: FIND SOMEONE TO VERIFY THE ACCURACY OF THE RATES (From my own testing with n=1000, the accumulated rate (1.6%) matches that of what the game presents.)
- * TODO: CLEANUP/FIX OUTPUT
  * TODO: ADD AN ACTUAL LICENSE
  * TODO: IMPLEMENT FATE POINTS
  * @author dyhar
  */
 public class WishSim 
 {
-    public static void main(String[] args) {
+    public static void cli() {
         //Creating an instance of the Character Banner Class
         //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
         CharacterBanner CbannerStatus = new CharacterBanner(); 

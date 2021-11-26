@@ -1,33 +1,44 @@
 
-package ShitGacha;
+package GachaSim.Banners;
+import GachaSim.Backend.CoreBackend; //importing the CoreBackend services for rarity detection
 import java.util.Random;
-import static ShitGacha.GachaPool.*;
+import static GachaSim.Backend.GachaPool.*; //importing GachaPool class for the gacha pool
 /**
  * This class handles the rolling of the Character Rate-up banner.
  * Arguments in order are: The 5* rate up, and three rate up 4*. Separated by commas.
+
  * @author dyhar
  */
 public class CharacterBanner {
-    public static boolean guaranteed5 = false; 
+    //Declaring these variables as static so others classes can access them.
+    public static boolean guaranteed5 = false;
     public static int Crolls=0,_4Spity=0; 
-    public static Random rngd = new Random();
-     //rolls a banner once. Arguments are the 4 rate up chars
+     /**
+      * Rolls the Character banner once. Arguments are the 4 rate up chars.
+      * 
+      * @param $5rateup The current 5* rate-up character.
+      * @param $4rateup1 The first rate-up 4*.
+      * @param $4rateup2 The second rate-up 4*.
+      * @param $4rateup3 The third rate-up 4*.
+      * @return the character you pulled.
+     */
     public static String CharRoll(String $5rateup, String  $4rateup1, String $4rateup2, String $4rateup3)
     {
+                Random rngd = new Random();
                 //  _____    _____ _                 
                 // | ____|  / ____| |                
                 // | |__   | (___ | |_ __ _ _ __ ___ 
                 // |___ \   \___ \| __/ _` | '__/ __|
                 //  ___) |  ____) | || (_| | |  \__ \
                 // |____/  |_____/ \__\__,_|_|  |___/
-                int rarity = Backend.Rarity(Backend.gachaChance('c'), 'c');
+                int rarity = CoreBackend.Rarity(CoreBackend.gachaChance('c'), 'c');
                 //If you randomly got a 5* pull or to 90 pulls, and you're guaranteed, you get the rate up character.
                 if( (guaranteed5 == true && rarity == 5) || (guaranteed5 == true && Crolls == 89) ) 
                 {
                     Crolls = 0; //resets rolls to 0.
                     _4Spity++; //builds 4* pity
                     guaranteed5 = !guaranteed5; //resets guarantee
-                    Backend.resetChance('c'); //clears accumulated pity.
+                    CoreBackend.resetChance('c'); //clears accumulated pity.
                     return $5rateup; //returns the character rolled
                 }
                 //If you randomly got a 5* pull or got to 90 pulls but don't have a guarantee, you have a 50/50 chance to get a rate up 5*.
@@ -36,7 +47,7 @@ public class CharacterBanner {
                 {
                     Crolls = 0;
                     _4Spity++;
-                    Backend.resetChance('c');
+                    CoreBackend.resetChance('c');
                     if(rngd.nextBoolean() == true)
                     {
                        guaranteed5 = false;

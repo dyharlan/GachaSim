@@ -1,9 +1,15 @@
+package GachaSim.Frontend;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ShitGacha;
+
+
+import GachaSim.Banners.StdBanner;
+import GachaSim.Banners.CharacterBanner;
+import GachaSim.Banners.WeaponBanner;
 
 /**
  *
@@ -71,7 +77,7 @@ public class WishSimGUI extends javax.swing.JFrame {
         StdClearHistory = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("GachaSim");
+        setTitle("GachaSim alpha3");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
@@ -116,6 +122,7 @@ public class WishSimGUI extends javax.swing.JFrame {
             }
         });
 
+        CharWishHistory.setEditable(false);
         CharWishHistory.setColumns(20);
         CharWishHistory.setRows(5);
         CharWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -204,6 +211,7 @@ public class WishSimGUI extends javax.swing.JFrame {
         WpnLast4.setText("0");
         WpnLast4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
+        WpnWishHistory.setEditable(false);
         WpnWishHistory.setColumns(20);
         WpnWishHistory.setRows(5);
         WpnWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -265,6 +273,7 @@ public class WishSimGUI extends javax.swing.JFrame {
 
         SPane.addTab("Weapon Banner", null, WpnBanner, "Pull on the Banner with the currently featured weapons.");
 
+        StdWishHistory.setEditable(false);
         StdWishHistory.setColumns(20);
         StdWishHistory.setRows(5);
         StdWishHistory.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -436,10 +445,8 @@ public class WishSimGUI extends javax.swing.JFrame {
         StdWishHistory.setText(null);
     }//GEN-LAST:event_StdClearHistoryActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
+    
+    public static void swing() {
        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
