@@ -8,11 +8,6 @@ import java.util.Random;
  * This class mainly handles the algorithms to determine the rarity of the pull on each
  * of the in-game banners. (Standard, Weapon, and Character)
  * 
- * Summary of each of the Methods:
- * gachaChance() - returns a float value between 0 and 1. 
- * Rarity() - Determines the rarity of the wish based off a float value passed on to it. The odds are adjusted depending on the banner used.
- * resetChance() - resets the soft pity accumulated odds on each banner.
- * 
  * @author dyhar
  */
 public class CoreBackend {
@@ -31,9 +26,14 @@ public class CoreBackend {
     static Random garborates = new Random(); //Declaring a new random class
     
  //==============================================================================//
-    //This method determines the chance that will be used by Rarity() to determine the rarity of the wish.
-    //Starting with the 74/64th pull, an additional 6.25% is deducted until the percentage is equal to or less than 0.
-    //char b determines what banner is used to appropriately kickstart the soft pity.
+    
+    /**
+    * This method determines the chance that will be used by Rarity() to determine the rarity of the wish.
+    * Starting with the 74/64th pull, an additional 6.25% is deducted until the percentage is equal to or less than 0.
+    * @param b Determines when to start the soft pity of the selected banner. "c" and "s" starts at the 74th pull. "w" starts at the 64th pull.
+    * @return a float value between 0 and 1.
+    */
+    
     public static float gachaChance(char b)
     {
         //this switch determines when the soft pity will start.
@@ -70,9 +70,12 @@ public class CoreBackend {
         return 0.0f;
     }
    
-    //Determines the rarity based-off a float value passed on to it.
-    //invoking w will adjust the rates to match the weapon banner
-    //invoking c will adjust the rates to match the char banner
+    /**Determines the rarity based-off a float value passed on to it.
+    * @param x accepts any float value between 0 and 1. The method checks what rarity you got based off the float value.
+    * @param b accepts 'w' or 'c' to adjust the rates for the specific banner.
+    * 
+    * @return returns the rarity of the character of weapon from the pull.
+    */
     public static int Rarity(float x, char b)
     {
         switch(b)
@@ -95,8 +98,12 @@ public class CoreBackend {
         }
         return 0;
     }
-    //this method manually resets the accumulated soft pity
-    //for each of the banners.
+    /**this method manually resets the accumulated soft pity
+    * for each of the banners.
+    * @param b resets the accumulated pity of the selected banner. 'c' resets the soft-pity for the character banner,
+    * 'w' resets the weapon banner, and
+    * 's' resets the standard banner.
+    */
     public static void resetChance(char b)
     {
         switch (b)

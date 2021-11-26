@@ -16,6 +16,10 @@ import static GachaSim.Backend.GachaPool.*; //importing GachaPool class for the 
 public class StdBanner {
     //Declaring these variables as static so others classes can access them.
     public static int Srolls=0,_4Spity=0; 
+    /**
+     * Rolls on the standard banner once.
+     * @return The character/weapon you pulled. 
+     */
     public static String StdRoll()
     {
                 Random rngd = new Random();

@@ -6,13 +6,22 @@ import static GachaSim.Backend.GachaPool.*; //importing GachaPool class for the 
 /**
  * This class handles the rolling of the Character Rate-up banner.
  * Arguments in order are: The 5* rate up, and three rate up 4*. Separated by commas.
+
  * @author dyhar
  */
 public class CharacterBanner {
     //Declaring these variables as static so others classes can access them.
     public static boolean guaranteed5 = false;
     public static int Crolls=0,_4Spity=0; 
-     //rolls a banner once. Arguments are the 4 rate up chars
+     /**
+      * Rolls the Character banner once. Arguments are the 4 rate up chars.
+      * 
+      * @param $5rateup The current 5* rate-up character.
+      * @param $4rateup1 The first rate-up 4*.
+      * @param $4rateup2 The second rate-up 4*.
+      * @param $4rateup3 The third rate-up 4*.
+      * @return the character you pulled.
+     */
     public static String CharRoll(String $5rateup, String  $4rateup1, String $4rateup2, String $4rateup3)
     {
                 Random rngd = new Random();

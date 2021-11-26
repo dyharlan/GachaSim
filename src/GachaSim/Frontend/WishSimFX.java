@@ -6,7 +6,7 @@ package GachaSim.Frontend;
  * and open the template in the editor.
  */
 
-//The fxml file which contains the layout for the JavaFX UI and the Controller is located in ShitGacha.JavaFX
+//The fxml file which contains the layout for the JavaFX UI and the Controller is located in this directory.
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +15,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- *
+ * This class contains the method to launch the JavaFX front-end.
+ * The FXController handles application logic, while the fxml file handles the layout, to be edited by the Scene Builder.
  * @author dyhar
  */
 public class WishSimFX extends Application {
@@ -31,6 +32,7 @@ public class WishSimFX extends Application {
         Scene scene = new Scene(root);
         //scene.getStylesheets().add("ShitGacha/Frontend/flat.css";
         stage.setScene(scene);
+        stage.setTitle("GachaSim alpha3");
         stage.setResizable(false);
         stage.show();
             }

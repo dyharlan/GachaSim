@@ -77,7 +77,7 @@ public class WishSimGUI extends javax.swing.JFrame {
         StdClearHistory = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("GachaSim");
+        setTitle("GachaSim alpha3");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
@@ -445,9 +445,7 @@ public class WishSimGUI extends javax.swing.JFrame {
         StdWishHistory.setText(null);
     }//GEN-LAST:event_StdClearHistoryActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void swing() {
        
         /* Set the Nimbus look and feel */

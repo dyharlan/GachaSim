@@ -36,10 +36,13 @@
                            </graphic>
                         </Button>
                         <TextArea fx:id="CharWishHistory" editable="false" layoutX="24.0" layoutY="179.0" prefHeight="392.0" prefWidth="434.0" />
-                        <Label fx:id="guaranteed5" alignment="CENTER" layoutX="86.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="false" />
-                        <Label fx:id="CharRolls" alignment="CENTER" layoutX="249.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
-                        <Label fx:id="CharLast4" alignment="CENTER" layoutX="422.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
+                        <Label fx:id="guaranteed5" alignment="CENTER" layoutX="105.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="false" />
+                        <Label fx:id="CharRolls" alignment="CENTER" layoutX="259.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
+                        <Label fx:id="CharLast4" alignment="CENTER" layoutX="429.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
                         <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleCharClearHistory" prefHeight="39.0" prefWidth="142.0" text="Clear Wish History" />
+                        <Label layoutX="14.0" layoutY="88.0" text="Guaranteed 5*?" />
+                        <Label layoutX="180.0" layoutY="88.0" text="Banner Rolls:" />
+                        <Label layoutX="335.0" layoutY="74.0" prefHeight="45.0" prefWidth="94.0" text="Rolls since Last 4*" />
                      </children>
                   </AnchorPane>
             </content>
@@ -67,9 +70,11 @@
                            </graphic>
                         </Button>
                         <TextArea fx:id="WpnWishHistory" editable="false" layoutX="24.0" layoutY="179.0" prefHeight="392.0" prefWidth="434.0" />
-                        <Label fx:id="WpnRolls" alignment="CENTER" layoutX="249.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
-                        <Label fx:id="WpnLast4" alignment="CENTER" layoutX="422.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
+                        <Label fx:id="WpnRolls" alignment="CENTER" layoutX="259.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
+                        <Label fx:id="WpnLast4" alignment="CENTER" layoutX="429.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
                         <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleWpnClearHistory" prefHeight="39.0" prefWidth="142.0" text="Clear Wish History" />
+                        <Label layoutX="180.0" layoutY="88.0" text="Banner Rolls:" />
+                        <Label layoutX="335.0" layoutY="74.0" prefHeight="45.0" prefWidth="94.0" text="Rolls since Last 4*" />
                      </children>
                   </AnchorPane>
                </content>
@@ -97,9 +102,10 @@
                            </graphic>
                         </Button>
                         <TextArea fx:id="StdWishHistory" editable="false" layoutX="24.0" layoutY="179.0" prefHeight="392.0" prefWidth="434.0" />
-                        <Label fx:id="StdRolls" alignment="CENTER" layoutX="249.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
-                        <Label fx:id="StdLast4" alignment="CENTER" layoutX="422.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
+                        <Label fx:id="StdRolls" alignment="CENTER" layoutX="259.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
+                        <Label fx:id="StdLast4" alignment="CENTER" layoutX="429.0" layoutY="78.0" prefHeight="37.0" prefWidth="72.0" style="-fx-border-color: gray;" text="0" />
                         <Button layoutX="34.0" layoutY="132.0" mnemonicParsing="false" onAction="#handleStdClearHistory" prefHeight="39.0" prefWidth="142.0" text="Clear Wish History" />
+                        <Label layoutX="335.0" layoutY="74.0" prefHeight="45.0" prefWidth="94.0" text="Rolls since Last 4*" />
                      </children>
                   </AnchorPane>
                </content>

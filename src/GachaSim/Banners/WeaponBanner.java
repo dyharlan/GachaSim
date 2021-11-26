@@ -15,8 +15,19 @@ public class WeaponBanner {
     //Declaring these variables as static so others classes can access them.
     public static int _4Spity=0; 
     public static int Wrolls=0;
-    //rolls a banner once.
-    public static String WpnRoll(String $5wrateup1, String $5rateup2 
+     /**
+      * Rolls the weapon banner once. Arguments are the 7 rate up weapons
+      * 
+      * @param $5wrateup1 The first current 5* rate-up weapon.
+      * @param $5wrateup2 The second current 5* rate-up weapon.
+      * @param $4wrateup1 The first rate-up 4*.
+      * @param $4wrateup2 The second rate-up 4*.
+      * @param $4wrateup3 The third rate-up 4*.
+      * @param $4wrateup4 The fourth rate-up 4*.
+      * @param $4wrateup5 The fifth rate-up 4*.
+      * @return the weapon/char you pulled.
+     */
+    public static String WpnRoll(String $5wrateup1, String $5wrateup2 
             ,String  $4wrateup1, String  $4wrateup2, String  $4wrateup3, String  $4wrateup4, String  $4wrateup5)
      {
         Random rngd = new Random();
@@ -33,7 +44,7 @@ public class WeaponBanner {
                     Wrolls = 0; //resets pity counter to 0
                     _4Spity++; // add 4* pity
                     CoreBackend.resetChance('w'); //resets accumulated odds
-                    return _5_Star__Weapons($5wrateup1, $5rateup2); //pray to God.
+                    return _5_Star__Weapons($5wrateup1, $5wrateup2); //pray to God.
                 }
                 //  _  _      _____ _                 
                 // | || |    / ____| |                

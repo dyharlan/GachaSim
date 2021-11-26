@@ -7,20 +7,24 @@ package GachaSim.Backend;
 import java.util.Random;
 
 /**
- * This class contains the Pool that the banners use to determine
- * the character or weapon to give to the user.
- * @author dyhar
+ * This class contains the Pool 
+ * 
  */
+
+ /**This class contains methods that store an array that the banners use to determine
+  * the character or weapon to give to the user.
+  * invoking the x amount of args needed by the method will allow you to insert an x amount of rate up chars or weapons.
+  * @author dyhar
+  */
 public class GachaPool {
     static Random garborates = new Random(); //Declaring a new random class
-        //These methods store an array wherein if invoked, will return any character/weapon stored in the array.
-    //invoking the x amount of args needed by the method will allow you to insert an x amount of rate up chars or weapons
+   
 //=======================================================================================================================//
     //character pool
     public static String _5_Star__Characters()
     {
         String[] _5character = {"Jean", "Diluc", "Qiqi", "Keqing", "Mona"};
-        return _5character[garborates.nextInt(_5character.length)]; //returns a random char from the pool
+        return _5character[garborates.nextInt(_5character.length)]; //return a random char from the pool
     }
     
     public static String _4_Star__Characters()
