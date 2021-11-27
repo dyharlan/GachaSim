@@ -12,7 +12,7 @@ import static GachaSim.Backend.GachaPool.*;
  * @author dyhar
  */
 public class WeaponBanner {
-    //Declaring these variables as static so others classes can access them.
+    //Declaring these variables as static so frontends can access them.
     public static int _4Spity=0; 
     public static int Wrolls=0;
      /**
