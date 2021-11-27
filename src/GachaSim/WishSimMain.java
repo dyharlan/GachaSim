@@ -6,8 +6,8 @@ import static GachaSim.Frontend.WishSimFX.*;
 
 /**
  * The main method calls all the other front-ends that are available to the user.
- * The frontends are Located in GachaSim.Frontend.
- * By default, the simulator uses the JavaFX frontend.
+ * The frontends are Located in GachaSim.Front-end.
+ * By default, the simulator uses the JavaFX front-end.
  * @author dyhar
  */
 public class WishSimMain {
@@ -23,7 +23,7 @@ public class WishSimMain {
         StringBuilder help = new StringBuilder();
         help.append("\nThese are the valid arguments for GachaSim: \n");
         help.append("--cli or -c: Calls the cli frontend.\n");
-        help.append("--swing or -c: Calls the Swing-based frontend. \n");
+        help.append("--swing or -s: Calls the Swing-based frontend. \n");
         help.append("--javafx or -fx: (Default) Calls the experimental JavaFX-based frontend.\n");
         if (args.length > 0)
             {
