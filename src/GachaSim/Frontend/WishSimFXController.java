@@ -43,6 +43,14 @@ public class WishSimFXController implements Initializable {
     @FXML
     private Label CharLast4;
     @FXML
+    private TextArea CharWishHistory_;
+    @FXML
+    private Label guaranteed5_;
+    @FXML
+    private Label CharRolls_;
+    @FXML
+    private Label CharLast4_;
+    @FXML
     private TextArea WpnWishHistory;
     @FXML
     private Label WpnRolls;
@@ -54,6 +62,7 @@ public class WishSimFXController implements Initializable {
     private Label StdRolls;
     @FXML
     private Label StdLast4;
+    
 
     /**
      * Initializes the controller class.
@@ -69,6 +78,10 @@ public class WishSimFXController implements Initializable {
         guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
         CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
         CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
+
+        guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
+        CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
+        CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
     }
 
     @FXML
@@ -78,15 +91,57 @@ public class WishSimFXController implements Initializable {
            CharWishHistory.appendText(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle") + "\n");
            guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
            CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
-           CharLast4.setText(String.valueOf(CbannerStatus._4Spity));  
+           CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
+           
+           guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
+           CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
+           CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
        }
     }
 
     @FXML
     private void handleCharClearHistory(ActionEvent event) {
         CharWishHistory.clear();
+        CharWishHistory_.clear();
         System.gc();
     }
+    
+    @FXML
+    private void handleCharRoll_(ActionEvent event) {
+        CharWishHistory_.appendText(CharacterBanner.CharRoll("Eula", "Rosaria", "Bennett", "Noelle") + "\n");
+        guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
+        CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
+        CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
+        
+        guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
+        CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
+        CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
+
+    }
+
+    @FXML
+    private void handleCharRoll10_(ActionEvent event) {
+       for(int ctr = 0 ; ctr < 10 ; ctr++)
+       {
+           CharWishHistory_.appendText(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle") + "\n");
+           guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
+           CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
+           CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));  
+           
+           guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
+           CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
+           CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
+
+       }
+    }
+
+    @FXML
+    private void handleCharClearHistory_(ActionEvent event) {
+        CharWishHistory.clear();
+        CharWishHistory_.clear();
+        System.gc();
+    }
+    
 
     @FXML
     private void handleWpnRoll(ActionEvent event) {
@@ -133,5 +188,4 @@ public class WishSimFXController implements Initializable {
         StdWishHistory.clear();
         System.gc();
     }
-    
 }

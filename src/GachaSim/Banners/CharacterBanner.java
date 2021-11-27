@@ -10,7 +10,7 @@ import static GachaSim.Backend.GachaPool.*; //importing GachaPool class for the 
  * @author dyhar
  */
 public class CharacterBanner {
-    //Declaring these variables as static so others classes can access them.
+    //Declaring these variables as static so frontends can access them.
     public static boolean guaranteed5 = false;
     public static int Crolls=0,_4Spity=0; 
      /**
