@@ -36,12 +36,13 @@ public class WishSimMain {
                             fx();
                             break;
                         default:
+                        case "-h":
                             System.out.print(help);
                             break;
                     }
             }
         else
-            cli();
+            fx();
        
     }
     
