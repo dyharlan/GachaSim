@@ -1,7 +1,6 @@
 
 package GachaSim;
 import static GachaSim.Frontend.WishSim.*;
-import static GachaSim.Frontend.WishSimGUI.*;
 import static GachaSim.Frontend.WishSimFX.*;
 
 /**

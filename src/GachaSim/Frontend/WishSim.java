@@ -33,6 +33,7 @@ public class WishSim
         int choice;
         while(!isFinished) //keeps the program running until the isFinished flag is turned on.
         {
+            System.out.println("\r");
             //The simulator header. W.I.P.
             System.out.println("Welcome to shit gacha!");
             System.out.println(" ");
