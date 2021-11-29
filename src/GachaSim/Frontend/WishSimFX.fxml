@@ -116,7 +116,7 @@
                   </AnchorPane>
                </content>
             </Tab>
-            <Tab text="WpnBanner">
+            <Tab text="Standard Banner">
                <content>
                   <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="585.0" prefWidth="924.0">
                      <children>
