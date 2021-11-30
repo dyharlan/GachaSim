@@ -82,6 +82,8 @@ public class WishSimFXController implements Initializable {
         guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
         CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
         CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
+        System.gc();
+
     }
 
     @FXML
@@ -96,6 +98,7 @@ public class WishSimFXController implements Initializable {
            guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
            CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
            CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
+           System.gc();
        }
     }
 
@@ -116,14 +119,14 @@ public class WishSimFXController implements Initializable {
         guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
         CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
         CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
-
+        System.gc();
     }
 
     @FXML
     private void handleCharRoll10_(ActionEvent event) {
        for(int ctr = 0 ; ctr < 10 ; ctr++)
        {
-           CharWishHistory_.appendText(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle") + "\n");
+           CharWishHistory_.appendText(CharacterBanner.CharRoll("Eula", "Rosaria", "Bennett", "Noelle") + "\n");
            guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
            CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
            CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));  
@@ -131,7 +134,7 @@ public class WishSimFXController implements Initializable {
            guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
            CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
            CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
-
+           System.gc();
        }
     }
 
@@ -157,6 +160,7 @@ public class WishSimFXController implements Initializable {
             WpnWishHistory.appendText(WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Roar", "Sacrificial Greatsword", "Dragon's Bane") + "\n");
             WpnRolls.setText(String.valueOf(WbannerStatus.Wrolls));
             WpnLast4.setText( String.valueOf(WbannerStatus._4Spity) );
+            System.gc();
        }
     }
 
@@ -171,6 +175,7 @@ public class WishSimFXController implements Initializable {
         StdWishHistory.appendText(StdBanner.StdRoll() + "\n");
         StdRolls.setText(String.valueOf(WbannerStatus.Wrolls));
         StdLast4.setText( String.valueOf(WbannerStatus._4Spity) );
+        System.gc();
     }
 
     @FXML
@@ -180,6 +185,7 @@ public class WishSimFXController implements Initializable {
             StdWishHistory.appendText(StdBanner.StdRoll() + "\n");
             StdRolls.setText(String.valueOf(SbannerStatus.Srolls));
             StdLast4.setText( String.valueOf(SbannerStatus._4Spity) );
+            System.gc();
        }
     }
 
