@@ -12,7 +12,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-
 import GachaSim.Banners.StdBanner;
 import GachaSim.Banners.CharacterBanner;
 import GachaSim.Banners.WeaponBanner;
@@ -33,7 +32,7 @@ public class WishSimFXController implements Initializable {
     //Creating an instance of the Standard Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static StdBanner SbannerStatus = new StdBanner();
-
+    
     @FXML
     private Label guaranteed5;
     @FXML
@@ -197,10 +196,12 @@ public class WishSimFXController implements Initializable {
 
     @FXML
     private void handleExit(ActionEvent event) {
+        javafx.application.Platform.exit();
     }
 
     @FXML
     private void handleHowto(ActionEvent event) {
+        //Action tubol = Dialogs.create();
     }
 
     @FXML
