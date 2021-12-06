@@ -5,4 +5,5 @@
  
  TODO:
 - Implement Fate Points (Genshin, could be too complex to be worth.)
-- Streamline the Lookup tables even more.
+- Improve the UI Design.
+- Make sure that the Gacha Pool isn't hardcoded anymore. Preferrably, it should be loaded from a file for larger gacha games.
