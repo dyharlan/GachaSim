@@ -194,4 +194,16 @@ public class WishSimFXController implements Initializable {
         StdWishHistory.clear();
         System.gc();
     }
+
+    @FXML
+    private void handleExit(ActionEvent event) {
+    }
+
+    @FXML
+    private void handleHowto(ActionEvent event) {
+    }
+
+    @FXML
+    private void handleAbout(ActionEvent event) {
+    }
 }
