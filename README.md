@@ -1,7 +1,9 @@
 # Gacha Simulator Framework.
  A terrible Gacha Simulator Framework for a Terrible Game Genre.
  
- The example code simulates a genshin impact roll session.
+ The example code simulates a genshin impact roll session. 
+ This is more of a coding exercise for me during my college java classes. This program might improve as I get
+ better with java and programming in general.
  
  TODO:
 - Implement Fate Points (Genshin, could be too complex to be worth.)
