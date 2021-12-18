@@ -93,7 +93,7 @@ public class CoreBackend {
                     return 5;
                 else if(x <= 0.051f)// rarity is 4* if the number is less than or equal to 5.1% or 0.051
                     return 4;
-                else if (x > 0.051f && x <= 1f) //fockin shit
+                else if (x > 0.051f && x <= 1f) //3* star...
                     return 3;
         }
         return 0;

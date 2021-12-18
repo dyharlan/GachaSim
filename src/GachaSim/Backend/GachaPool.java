@@ -84,7 +84,7 @@ public class GachaPool {
     {
         //String[] wpn = {"Cool Steel", "Dull Blade"} ;
         //return wpn[garborates.nextInt(wpn.length)];
-        return "fucking trash";
+        return "3-star...";
     }
 
 

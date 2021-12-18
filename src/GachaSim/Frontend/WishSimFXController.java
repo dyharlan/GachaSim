@@ -26,9 +26,11 @@ public class WishSimFXController implements Initializable {
     //Creating an instance of the Character Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     CharacterBanner CbannerStatus = new CharacterBanner(); 
+    
     //Creating an instance of the Weapon Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static WeaponBanner WbannerStatus = new WeaponBanner();
+    
     //Creating an instance of the Standard Banner Class
     //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
     static StdBanner SbannerStatus = new StdBanner();
@@ -73,7 +75,7 @@ public class WishSimFXController implements Initializable {
 
     @FXML
     private void handleCharRoll(ActionEvent event) {
-        CharWishHistory.appendText(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle") + "\n");
+        CharWishHistory.appendText(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou") + "\n");
         guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
         CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
         CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
@@ -89,7 +91,7 @@ public class WishSimFXController implements Initializable {
     private void handleCharRoll10(ActionEvent event) {
        for(int ctr = 0 ; ctr < 10 ; ctr++)
        {
-           CharWishHistory.appendText(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle") + "\n");
+           CharWishHistory.appendText(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou") + "\n");
            guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
            CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
            CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
@@ -107,10 +109,11 @@ public class WishSimFXController implements Initializable {
         CharWishHistory_.clear();
         System.gc();
     }
-    
+    //This Event controls the 2nd banner rate up. During the 2nd half of an update, this mainly duplicates the 1st rate up since i'm too lazy
+    // to figure out how to disable this that is reversible.
     @FXML
     private void handleCharRoll_(ActionEvent event) {
-        CharWishHistory_.appendText(CharacterBanner.CharRoll("Eula", "Rosaria", "Bennett", "Noelle") + "\n");
+        CharWishHistory_.appendText(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou") + "\n");
         guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
         CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
         CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
@@ -125,7 +128,7 @@ public class WishSimFXController implements Initializable {
     private void handleCharRoll10_(ActionEvent event) {
        for(int ctr = 0 ; ctr < 10 ; ctr++)
        {
-           CharWishHistory_.appendText(CharacterBanner.CharRoll("Eula", "Rosaria", "Bennett", "Noelle") + "\n");
+           CharWishHistory_.appendText(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou") + "\n");
            guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
            CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
            CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));  
@@ -147,7 +150,7 @@ public class WishSimFXController implements Initializable {
 
     @FXML
     private void handleWpnRoll(ActionEvent event) {
-        WpnWishHistory.appendText(WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Roar", "Sacrificial Greatsword", "Dragon's Bane") + "\n");
+        WpnWishHistory.appendText(WeaponBanner.WpnRoll("Skyward Harp", "RedHorn Stonethresher", "Favonius Lance", "Alley Flash", "Miiternachts Waltz", "The Bell", "Sacrificial Fragments") + "\n");
         WpnRolls.setText(String.valueOf(WbannerStatus.Wrolls));
         WpnLast4.setText( String.valueOf(WbannerStatus._4Spity) );
     }
@@ -156,7 +159,7 @@ public class WishSimFXController implements Initializable {
     private void handleWpnRoll10(ActionEvent event) {
        for(int ctr = 0 ; ctr < 10 ; ctr++)
        {
-            WpnWishHistory.appendText(WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Roar", "Sacrificial Greatsword", "Dragon's Bane") + "\n");
+            WpnWishHistory.appendText(WeaponBanner.WpnRoll("Skyward Harp", "RedHorn Stonethresher", "Favonius Lance", "Alley Flash", "Miiternachts Waltz", "The Bell", "Sacrificial Fragments") + "\n");
             WpnRolls.setText(String.valueOf(WbannerStatus.Wrolls));
             WpnLast4.setText( String.valueOf(WbannerStatus._4Spity) );
             System.gc();
@@ -201,7 +204,7 @@ public class WishSimFXController implements Initializable {
 
     @FXML
     private void handleHowto(ActionEvent event) {
-        //Action tubol = Dialogs.create();
+        
     }
 
     @FXML

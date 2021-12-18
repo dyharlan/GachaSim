@@ -60,7 +60,7 @@ public class StdBanner {
                 //    | |    | '__|  / _` | / __|  | '_ \ 
                 //    | |    | |    | (_| | \__ \  | | | |
                 //    |_|    |_|     \__,_| |___/  |_| |_|                                            
-                //You stepped on dogshit.
+                //You stepped on trash.
                 else 
                 {
                     _4Spity++;

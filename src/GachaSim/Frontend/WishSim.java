@@ -59,11 +59,11 @@ public class WishSim
             switch (choice)
             {
                 case 1://Rolls on the character banner "rate up" once
-                    System.out.println(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle"));
+                    System.out.println(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou"));
                     System.gc();
                     break;
                 case 2:          
-                    System.out.println(WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Roar", "Sacrificial Greatsword", "Dragon's Bane"));
+                    System.out.println(WeaponBanner.WpnRoll("Skyward Harp", "RedHorn Stonethresher", "Favonius Lance", "Alley Flash", "Miiternachts Waltz", "The Bell", "Sacrificial Fragments"));
                     System.gc();
                     break;
                 case 3:
@@ -72,16 +72,16 @@ public class WishSim
                     break;
                 case 4:
                     for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
-                        System.out.println(CharacterBanner.CharRoll("Albedo", "Rosaria", "Bennett", "Noelle"));
+                        System.out.println(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou"));
                     System.gc();
                     break;
                 case 5:
                     for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
-                        System.out.println(WeaponBanner.WpnRoll("Freedom-Sworn", "Song of Broken Pines", "Wine and Song", "Alley Hunter", "Lion's Roar", "Sacrificial Greatsword", "Dragon's Bane"));
+                        System.out.println(WeaponBanner.WpnRoll("Skyward Harp", "RedHorn Stonethresher", "Favonius Lance", "Alley Flash", "Miiternachts Waltz", "The Bell", "Sacrificial Fragments"));
                     System.gc();
                     break;
                 case 6:
-                     for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
+                    for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
                         System.out.println(StdBanner.StdRoll());
                     System.gc();
                      break;
