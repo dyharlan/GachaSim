@@ -83,8 +83,6 @@ public class WishSimFXController implements Initializable {
         guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
         CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
         CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
-        System.gc();
-
     }
 
     @FXML
@@ -99,7 +97,6 @@ public class WishSimFXController implements Initializable {
            guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
            CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
            CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
-           System.gc();
        }
     }
 
@@ -107,7 +104,6 @@ public class WishSimFXController implements Initializable {
     private void handleCharClearHistory(ActionEvent event) {
         CharWishHistory.clear();
         CharWishHistory_.clear();
-        System.gc();
     }
     //This Event controls the 2nd banner rate up. During the 2nd half of an update, this mainly duplicates the 1st rate up since i'm too lazy
     // to figure out how to disable this that is reversible.
@@ -121,7 +117,6 @@ public class WishSimFXController implements Initializable {
         guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
         CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
         CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
-        System.gc();
     }
 
     @FXML
@@ -136,7 +131,6 @@ public class WishSimFXController implements Initializable {
            guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
            CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
            CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
-           System.gc();
        }
     }
 
@@ -144,7 +138,6 @@ public class WishSimFXController implements Initializable {
     private void handleCharClearHistory_(ActionEvent event) {
         CharWishHistory.clear();
         CharWishHistory_.clear();
-        System.gc();
     }
     
 
@@ -162,14 +155,12 @@ public class WishSimFXController implements Initializable {
             WpnWishHistory.appendText(WeaponBanner.WpnRoll("Skyward Harp", "RedHorn Stonethresher", "Favonius Lance", "Alley Flash", "Miiternachts Waltz", "The Bell", "Sacrificial Fragments") + "\n");
             WpnRolls.setText(String.valueOf(WbannerStatus.Wrolls));
             WpnLast4.setText( String.valueOf(WbannerStatus._4Spity) );
-            System.gc();
        }
     }
 
     @FXML
     private void handleWpnClearHistory(ActionEvent event) {
         WpnWishHistory.clear();
-        System.gc();
     }
 
     @FXML
@@ -177,7 +168,6 @@ public class WishSimFXController implements Initializable {
         StdWishHistory.appendText(StdBanner.StdRoll() + "\n");
         StdRolls.setText(String.valueOf(WbannerStatus.Wrolls));
         StdLast4.setText( String.valueOf(WbannerStatus._4Spity) );
-        System.gc();
     }
 
     @FXML
@@ -187,14 +177,12 @@ public class WishSimFXController implements Initializable {
             StdWishHistory.appendText(StdBanner.StdRoll() + "\n");
             StdRolls.setText(String.valueOf(SbannerStatus.Srolls));
             StdLast4.setText( String.valueOf(SbannerStatus._4Spity) );
-            System.gc();
        }
     }
 
     @FXML
     private void handleStdClearHistory(ActionEvent event) {
         StdWishHistory.clear();
-        System.gc();
     }
 
     @FXML
