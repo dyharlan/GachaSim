@@ -60,33 +60,26 @@ public class WishSim
             {
                 case 1://Rolls on the character banner "rate up" once
                     System.out.println(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou"));
-                    System.gc();
                     break;
                 case 2:          
                     System.out.println(WeaponBanner.WpnRoll("Skyward Harp", "RedHorn Stonethresher", "Favonius Lance", "Alley Flash", "Miiternachts Waltz", "The Bell", "Sacrificial Fragments"));
-                    System.gc();
                     break;
                 case 3:
                     System.out.println(StdBanner.StdRoll());
-                    System.gc();
                     break;
                 case 4:
                     for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
                         System.out.println(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou"));
-                    System.gc();
                     break;
                 case 5:
                     for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
                         System.out.println(WeaponBanner.WpnRoll("Skyward Harp", "RedHorn Stonethresher", "Favonius Lance", "Alley Flash", "Miiternachts Waltz", "The Bell", "Sacrificial Fragments"));
-                    System.gc();
                     break;
                 case 6:
                     for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
                         System.out.println(StdBanner.StdRoll());
-                    System.gc();
                      break;
                 case 7:
-                   System.gc();
                    isFinished = true;
                    break;
             }   
