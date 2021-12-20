@@ -37,6 +37,7 @@ public class WishSimMain {
                             break;
                         default:
                         case "-h":
+                        case "--help":
                             System.out.print(help);
                             break;
                     }
