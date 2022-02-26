@@ -32,7 +32,7 @@ public class WishSimFX extends Application {
         Scene scene = new Scene(root);
         //scene.getStylesheets().add("ShitGacha/Frontend/flat.css";
         stage.setScene(scene);
-        stage.setTitle("GachaSim alpha3");
+        stage.setTitle("GachaSim beta2");
         stage.setResizable(false);
         stage.show();
             }
