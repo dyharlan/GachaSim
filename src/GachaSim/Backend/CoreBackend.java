@@ -13,11 +13,6 @@ import java.util.Random;
 public class CoreBackend {
     
    //=======================Game-specific Variables================================//
-    //Creating an instance of the Character, Weapon and Standard Banner Classes
-    //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
-    static CharacterBanner CbannerStatus = new CharacterBanner(); 
-    static WeaponBanner WbannerStatus = new WeaponBanner();
-    static StdBanner SbannerStatus = new StdBanner();
     static float Csoftpity=0.0f;  //resets the Character softpity to 0f
     static float Wsoftpity=0.0f;  //resets the Weapon softpity to 0f
     static float Ssoftpity=0.0f;  //resets the Std banner softpity to 0f
@@ -43,7 +38,7 @@ public class CoreBackend {
         {
         case  'c':
             //starting with the 74th pull on the character banner, an additional 6.25% is added to the odds.
-            if(CbannerStatus.Crolls >= 73){ 
+            if(CharacterBanner.Crolls >= 73){ 
                 Csoftpity+=0.0625f;
                 return garborates.nextFloat()-Csoftpity; 
             }
@@ -52,7 +47,7 @@ public class CoreBackend {
                 
         case 'w': 
             //starting with the 64th pull on the weapon banner, an additional 6.25% is added to the odds.
-            if(WbannerStatus.Wrolls >= 63){
+            if(WeaponBanner.Wrolls >= 63){
                 Wsoftpity+=0.0625f;
                 return garborates.nextFloat()-Wsoftpity; 
             }
@@ -60,7 +55,7 @@ public class CoreBackend {
                 return garborates.nextFloat();
         case 's': 
             //starting with the 74th pull on the Std banner, an additional 6.25% is added to the odds.
-            if(SbannerStatus.Srolls >= 73){
+            if(StdBanner.Srolls >= 73){
                 Ssoftpity+=0.0625f;
                 return garborates.nextFloat()-Ssoftpity; 
             }
