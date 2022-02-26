@@ -16,13 +16,10 @@ public class CharacterBanner {
      /**
       * Rolls the Character banner once. Arguments are the 4 rate up chars.
       * 
-      * @param $5rateup The current 5* rate-up character.
-      * @param $4rateup1 The first rate-up 4*.
-      * @param $4rateup2 The second rate-up 4*.
-      * @param $4rateup3 The third rate-up 4*.
+      * @param $5srateup The current 5* rate-up character.
       * @return the character you pulled.
      */
-    public static String CharRoll(String $5rateup, String  $4rateup1, String $4rateup2, String $4rateup3)
+    public static String CharRoll(String $5srateup)
     {
                 Random rngd = new Random();
                 //  _____    _____ _                 
@@ -39,7 +36,7 @@ public class CharacterBanner {
                     _4Spity++; //builds 4* pity
                     guaranteed5 = !guaranteed5; //resets guarantee
                     CoreBackend.resetChance('c'); //clears accumulated pity.
-                    return $5rateup; //returns the character rolled
+                    return $5srateup; //returns the character rolled
                 }
                 //If you randomly got a 5* pull or got to 90 pulls but don't have a guarantee, you have a 50/50 chance to get a rate up 5*.
                 //Otherwise, guarantees that the next 5* you pull on this banner is the rate up.
@@ -51,7 +48,7 @@ public class CharacterBanner {
                     if(rngd.nextBoolean() == true)
                     {
                        guaranteed5 = false;
-                       return  $5rateup;
+                       return $5srateup;
                     }
                        guaranteed5 = true;
                        return _5_Star__Characters();
@@ -69,7 +66,7 @@ public class CharacterBanner {
                     _4Spity = 0;
                     Crolls++;
                     // 50/50 chance to get a rate up char or weapon
-                    return (rngd.nextBoolean() == true)? _4_Star__Characters($4rateup1, $4rateup2, $4rateup2) : _4_Star__Weapons();
+                    return (rngd.nextBoolean() == true)? _4_Star__Characters() : _4_Star__Weapons();
                 }
                 //  _______                         _     
                 // |__   __|                       | |    

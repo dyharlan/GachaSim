@@ -37,7 +37,7 @@ public class StdBanner {
                     _4Spity++; //builds 4* pity
                     CoreBackend.resetChance('s'); //clears accumulated pity.
                     //returns either a 5* weapon or character
-                    return (rngd.nextBoolean() == true)? _5_Star__Characters() : _5_Star__Weapons(); 
+                    return (rngd.nextBoolean() == true)? _5_Star__Characters() : _5_Star__Weapons("nr"); 
                 }
                 //  _  _      _____ _                 
                 // | || |    / ____| |                
@@ -52,7 +52,7 @@ public class StdBanner {
                     _4Spity = 0;
                     Srolls++;
                     // 50/50 chance to get a rate up char or weapon
-                    return (rngd.nextBoolean() == true)? _4_Star__Characters() : _4_Star__Weapons();
+                    return (rngd.nextBoolean() == true)? _4_Star__Characters("nr") : _4_Star__Weapons();
                 }
                 //  _______                         _     
                 // |__   __|                       | |    
@@ -67,5 +67,6 @@ public class StdBanner {
                     Srolls++;
                     return _3_Star__Weapons();
                 }
+                
     }
 }

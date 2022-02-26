@@ -6,7 +6,7 @@
 package GachaSim.Banners;
 import GachaSim.Backend.CoreBackend;
 import java.util.Random;
-import static GachaSim.Backend.GachaPool.*;
+import static GachaSim.Backend.GachaPool.*; //importing GachaPool class for the gacha pool
 /**
  *
  * @author dyhar
@@ -27,8 +27,7 @@ public class WeaponBanner {
       * @param $4wrateup5 The fifth rate-up 4*.
       * @return the weapon/char you pulled.
      */
-    public static String WpnRoll(String $5wrateup1, String $5wrateup2 
-            ,String  $4wrateup1, String  $4wrateup2, String  $4wrateup3, String  $4wrateup4, String  $4wrateup5)
+    public static String WpnRoll()
      {
         Random rngd = new Random();
                 //  _____    _____ _                 
@@ -44,7 +43,7 @@ public class WeaponBanner {
                     Wrolls = 0; //resets pity counter to 0
                     _4Spity++; // add 4* pity
                     CoreBackend.resetChance('w'); //resets accumulated odds
-                    return _5_Star__Weapons($5wrateup1, $5wrateup2); //pray to God.
+                    return _5_Star__Weapons(); //pray to God.
                 }
                 //  _  _      _____ _                 
                 // | || |    / ____| |                
@@ -59,7 +58,7 @@ public class WeaponBanner {
                     _4Spity = 0; //resets 4* count
                     Wrolls++; //adds pity
                     //you either get a rate up 4* weapon or char
-                    return (rngd.nextBoolean() == true)? _4_Star__Characters() : _4_Star__Weapons($4wrateup1, $4wrateup2, $4wrateup2, $4wrateup4, $4wrateup5);
+                    return (rngd.nextBoolean() == true)? _4_Star__Characters("nr") : _4_Star__Weapons();
                 }
              
                 //  _______                         _     
