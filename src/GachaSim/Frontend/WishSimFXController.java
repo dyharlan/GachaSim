@@ -15,6 +15,8 @@ import javafx.scene.control.TextArea;
 import GachaSim.Banners.StdBanner;
 import GachaSim.Banners.CharacterBanner;
 import GachaSim.Banners.WeaponBanner;
+import static GachaSim.Backend.GachaPool.*;
+
 import javafx.event.ActionEvent;
 
 /**
@@ -23,17 +25,6 @@ import javafx.event.ActionEvent;
  * @author dyhar
  */
 public class WishSimFXController implements Initializable {
-    //Creating an instance of the Character Banner Class
-    //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
-    CharacterBanner CbannerStatus = new CharacterBanner(); 
-    
-    //Creating an instance of the Weapon Banner Class
-    //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
-    static WeaponBanner WbannerStatus = new WeaponBanner();
-    
-    //Creating an instance of the Standard Banner Class
-    //in order to check the counters for the 5 and 4 star pity, and the 5* guarantee.
-    static StdBanner SbannerStatus = new StdBanner();
     
     @FXML
     private Label guaranteed5;
@@ -75,28 +66,28 @@ public class WishSimFXController implements Initializable {
 
     @FXML
     private void handleCharRoll(ActionEvent event) {
-        CharWishHistory.appendText(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou") + "\n");
-        guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
-        CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
-        CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
+        CharWishHistory.appendText(CharacterBanner.CharRoll(chars[0][chars[0].length-2]) + "\n");
+        guaranteed5.setText(String.valueOf(CharacterBanner.guaranteed5));
+        CharRolls.setText(String.valueOf(CharacterBanner.Crolls));
+        CharLast4.setText(String.valueOf(CharacterBanner._4Spity));
 
-        guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
-        CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
-        CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
+        guaranteed5_.setText(String.valueOf(CharacterBanner.guaranteed5));
+        CharRolls_.setText(String.valueOf(CharacterBanner.Crolls));
+        CharLast4_.setText(String.valueOf(CharacterBanner._4Spity));
     }
 
     @FXML
     private void handleCharRoll10(ActionEvent event) {
        for(int ctr = 0 ; ctr < 10 ; ctr++)
        {
-           CharWishHistory.appendText(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou") + "\n");
-           guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
-           CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
-           CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
+           CharWishHistory.appendText(CharacterBanner.CharRoll(chars[0][chars[0].length-2]) + "\n");
+           guaranteed5.setText(String.valueOf(CharacterBanner.guaranteed5));
+           CharRolls.setText(String.valueOf(CharacterBanner.Crolls));
+           CharLast4.setText(String.valueOf(CharacterBanner._4Spity));
            
-           guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
-           CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
-           CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
+           guaranteed5_.setText(String.valueOf(CharacterBanner.guaranteed5));
+           CharRolls_.setText(String.valueOf(CharacterBanner.Crolls));
+           CharLast4_.setText(String.valueOf(CharacterBanner._4Spity));
        }
     }
 
@@ -109,28 +100,28 @@ public class WishSimFXController implements Initializable {
     // to figure out how to disable this that is reversible.
     @FXML
     private void handleCharRoll_(ActionEvent event) {
-        CharWishHistory_.appendText(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou") + "\n");
-        guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
-        CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
-        CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));
+        CharWishHistory_.appendText(CharacterBanner.CharRoll(chars[0][chars[0].length-1]) + "\n");
+        guaranteed5_.setText(String.valueOf(CharacterBanner.guaranteed5));
+        CharRolls_.setText(String.valueOf(CharacterBanner.Crolls));
+        CharLast4_.setText(String.valueOf(CharacterBanner._4Spity));
         
-        guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
-        CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
-        CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
+        guaranteed5.setText(String.valueOf(CharacterBanner.guaranteed5));
+        CharRolls.setText(String.valueOf(CharacterBanner.Crolls));
+        CharLast4.setText(String.valueOf(CharacterBanner._4Spity));
     }
 
     @FXML
     private void handleCharRoll10_(ActionEvent event) {
        for(int ctr = 0 ; ctr < 10 ; ctr++)
        {
-           CharWishHistory_.appendText(CharacterBanner.CharRoll("Itto", "Xiangling", "Barbara", "Gorou") + "\n");
-           guaranteed5_.setText(String.valueOf(CbannerStatus.guaranteed5));
-           CharRolls_.setText(String.valueOf(CbannerStatus.Crolls));
-           CharLast4_.setText(String.valueOf(CbannerStatus._4Spity));  
+           CharWishHistory_.appendText(CharacterBanner.CharRoll(chars[0][chars[0].length-1]) + "\n");
+           guaranteed5_.setText(String.valueOf(CharacterBanner.guaranteed5));
+           CharRolls_.setText(String.valueOf(CharacterBanner.Crolls));
+           CharLast4_.setText(String.valueOf(CharacterBanner._4Spity));  
            
-           guaranteed5.setText(String.valueOf(CbannerStatus.guaranteed5));
-           CharRolls.setText(String.valueOf(CbannerStatus.Crolls));
-           CharLast4.setText(String.valueOf(CbannerStatus._4Spity));
+           guaranteed5.setText(String.valueOf(CharacterBanner.guaranteed5));
+           CharRolls.setText(String.valueOf(CharacterBanner.Crolls));
+           CharLast4.setText(String.valueOf(CharacterBanner._4Spity));
        }
     }
 
@@ -143,18 +134,18 @@ public class WishSimFXController implements Initializable {
 
     @FXML
     private void handleWpnRoll(ActionEvent event) {
-        WpnWishHistory.appendText(WeaponBanner.WpnRoll("Skyward Harp", "RedHorn Stonethresher", "Favonius Lance", "Alley Flash", "Miiternachts Waltz", "The Bell", "Sacrificial Fragments") + "\n");
-        WpnRolls.setText(String.valueOf(WbannerStatus.Wrolls));
-        WpnLast4.setText( String.valueOf(WbannerStatus._4Spity) );
+        WpnWishHistory.appendText(WeaponBanner.WpnRoll() + "\n");
+        WpnRolls.setText(String.valueOf(WeaponBanner.Wrolls));
+        WpnLast4.setText( String.valueOf(WeaponBanner._4Spity) );
     }
 
     @FXML
     private void handleWpnRoll10(ActionEvent event) {
        for(int ctr = 0 ; ctr < 10 ; ctr++)
        {
-            WpnWishHistory.appendText(WeaponBanner.WpnRoll("Skyward Harp", "RedHorn Stonethresher", "Favonius Lance", "Alley Flash", "Miiternachts Waltz", "The Bell", "Sacrificial Fragments") + "\n");
-            WpnRolls.setText(String.valueOf(WbannerStatus.Wrolls));
-            WpnLast4.setText( String.valueOf(WbannerStatus._4Spity) );
+            WpnWishHistory.appendText(WeaponBanner.WpnRoll() + "\n");
+            WpnRolls.setText(String.valueOf(WeaponBanner.Wrolls));
+            WpnLast4.setText( String.valueOf(WeaponBanner._4Spity) );
        }
     }
 
@@ -166,8 +157,8 @@ public class WishSimFXController implements Initializable {
     @FXML
     private void handleStdRoll(ActionEvent event) {
         StdWishHistory.appendText(StdBanner.StdRoll() + "\n");
-        StdRolls.setText(String.valueOf(WbannerStatus.Wrolls));
-        StdLast4.setText( String.valueOf(WbannerStatus._4Spity) );
+        StdRolls.setText(String.valueOf(StdBanner.Srolls));
+        StdLast4.setText( String.valueOf(StdBanner._4Spity) );
     }
 
     @FXML
@@ -175,8 +166,8 @@ public class WishSimFXController implements Initializable {
        for(int ctr = 0 ; ctr < 10 ; ctr++)
        {
             StdWishHistory.appendText(StdBanner.StdRoll() + "\n");
-            StdRolls.setText(String.valueOf(SbannerStatus.Srolls));
-            StdLast4.setText( String.valueOf(SbannerStatus._4Spity) );
+            StdRolls.setText(String.valueOf(StdBanner.Srolls));
+            StdLast4.setText( String.valueOf(StdBanner._4Spity) );
        }
     }
 
