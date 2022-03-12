@@ -117,6 +117,8 @@ public class WishSim
                 case 4:
                     for(SinglePullCounter = 0; SinglePullCounter < pulls.length; SinglePullCounter++)//Rolls on the character banner "rate up" ten times
                         pulls[SinglePullCounter] = CharacterBanner.CharRoll(chars[0][chars[0].length-2]);
+                        System.out.print("\033[H\033[2J");
+                        System.out.flush();
                     break;
                 case 5:
                     //for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
@@ -124,6 +126,8 @@ public class WishSim
                     //break;
                     for(SinglePullCounter = 0; SinglePullCounter < pulls.length; SinglePullCounter++)//Rolls on the character banner "rate up" ten times
                         pulls[SinglePullCounter] = WeaponBanner.WpnRoll();
+                        System.out.print("\033[H\033[2J");
+                        System.out.flush();
                     break;
                 case 6:
                     //for(int ctr = 0; ctr < 10; ctr++)//Rolls on the character banner "rate up" ten times
@@ -131,6 +135,8 @@ public class WishSim
                     // break;
                     for(SinglePullCounter = 0; SinglePullCounter < pulls.length; SinglePullCounter++)//Rolls on the character banner "rate up" ten times
                         pulls[SinglePullCounter] = StdBanner.StdRoll();
+                        System.out.print("\033[H\033[2J");
+                        System.out.flush();
                     break;
                 case 7:
                    isFinished = true;
