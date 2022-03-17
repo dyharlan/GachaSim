@@ -46,6 +46,9 @@ public class WishSim
             System.out.println("Rolls on the Weapon Banner: " + WeaponBanner.Wrolls);
             System.out.println("Rolls since last 4* on the Character Banner: " + WeaponBanner._4Spity);
             System.out.println(" ");
+            System.out.println("Rolls on the Standard Banner: " + StdBanner.Srolls);
+            System.out.println("Rolls since last 4* on the Standard Banner: " + StdBanner._4Spity);
+            System.out.println(" ");
             System.out.println(pulls[0]);
             System.out.println(pulls[1]);
             System.out.println(pulls[2]);
