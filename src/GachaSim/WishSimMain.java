@@ -5,6 +5,7 @@ import static GachaSim.Frontend.WishSim.*;
 import static GachaSim.Frontend.WishSimFX.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.NoSuchFileException;
 //import java.util.Arrays;
 
 /**
@@ -24,11 +25,20 @@ public class WishSimMain {
      */
     //public static String _5StarCharRateUp = chars[0][chars[0].length-2];
     //public static String _5StarCharRateUp2 = chars[0][chars[0].length-1];
-    public static void main(String[] args) throws FileNotFoundException, IOException {
-        load5StarCharPool("5starchars");
-        load4StarCharPool("4starchars");
-        load5StarWpnPool("5starwpns");
-        load4StarWpnPool("4starwpns");
+    public static void main(String[] args) {
+        try{
+            load5StarCharPool("5starchars");
+            load4StarCharPool("4starchars");
+            load5StarWpnPool("5starwpns");
+            load4StarWpnPool("4starwpns");
+        }
+        catch(IOException nsfe){
+            System.err.println(nsfe.toString());
+        }
+        //catch(IOException ioe){
+        //    System.err.println(ioe.toString());
+        //}
+        
         
         
         
