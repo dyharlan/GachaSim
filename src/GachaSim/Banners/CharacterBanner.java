@@ -61,12 +61,12 @@ public class CharacterBanner {
                 //    |_|   |_____/ \__\__,_|_|  |___/                                                        
                 //You obtain a 4*. You also reset the 4* counter
                 //You are also guaranteed a 4* every 10 pulls, but you also reset the 4* counter.
-                else if( ( (rarity == 3 || rarity == 4) && _4Spity >= 9 ) || rarity == 4 )
+                else if(rarity == 4 || ( (rarity == 3 || rarity == 4) && _4Spity >= 9) )
                 {
                     _4Spity = 0;
                     Crolls++;
                     // 50/50 chance to get a rate up char or weapon
-                    return (rngd.nextBoolean() == true)? _4_Star__Characters() : _4_Star__Weapons();
+                    return (rngd.nextFloat() >= 0.5f)? _4_Star__Characters() : _4_Star__Weapons("nr");
                 }
                 //  _______                         _     
                 // |__   __|                       | |    

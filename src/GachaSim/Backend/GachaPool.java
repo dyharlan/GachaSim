@@ -186,7 +186,7 @@ public class GachaPool {
     public static String _4_Star__Weapons(String args)
     {
          if(args.toLowerCase() == "nr") 
-            return chars[1][rngd.nextInt(wpns[1].length-5)];
+            return wpns[1][rngd.nextInt(wpns[1].length-5)];
         else
             return "Error";
     }

@@ -52,7 +52,7 @@ public class StdBanner {
                     _4Spity = 0;
                     Srolls++;
                     // 50/50 chance to get a rate up char or weapon
-                    return (rngd.nextBoolean() == true)? _4_Star__Characters("nr") : _4_Star__Weapons();
+                    return (rngd.nextFloat() >= 0.5f)? _4_Star__Characters("nr") : _4_Star__Weapons("nr");
                 }
                 //  _______                         _     
                 // |__   __|                       | |    

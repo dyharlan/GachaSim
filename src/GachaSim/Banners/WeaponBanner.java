@@ -58,7 +58,7 @@ public class WeaponBanner {
                     _4Spity = 0; //resets 4* count
                     Wrolls++; //adds pity
                     //you either get a rate up 4* weapon or char
-                    return (rngd.nextBoolean() == true)? _4_Star__Characters("nr") : _4_Star__Weapons();
+                    return (rngd.nextFloat() >= 0.5f)? _4_Star__Characters("nr") : _4_Star__Weapons();
                 }
              
                 //  _______                         _     
